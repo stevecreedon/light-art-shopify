@@ -2,7 +2,7 @@
 body{color:#2c2f2f;font-family:"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;text-align:center;background-color:#fff;}
 div#container{text-align:left;width:894px;min-width:894px;margin:0 auto;}
 div#shadow{background:url(content.png) no-repeat;width:894px;height:307px;}
-div.content{margin-top:-307px;padding:15px 7px 0;}
+div.content{padding:15px 7px 0;}
 div#bg{background-color:#fff;min-height:250px;height:auto!important;height:270px;padding:0 35px 25px;}
 div#roundup{font-size:1px;text-indent:-99999px;background:url(roundup.png) no-repeat;height:10px;}
 div#main{width:590px;padding-bottom:15px;float:left;}
