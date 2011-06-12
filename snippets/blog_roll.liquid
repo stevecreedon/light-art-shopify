@@ -1,0 +1,11 @@
+<h2><a href="{{ blog_roll.url }}">{{ blog_roll.title }}</a></h2>
+{% paginate blog_roll.articles by 3 %}
+{% for article in blog_roll.articles %}<!-- START ENTRY {{ forloop.index }} -->
+
+<p class="title"><b><a href="{{ article.url }}">{{ article.title | escape }}</a></b><br/>
+	{{ article.content | strip_html | truncate: 100 }}. <a href="{{ article.url }}">more</a>
+</p>
+<!-- END ENTRY {{ forloop.index }} -->
+{% endfor %}
+{% endpaginate %}
+<p>All <a href="{{ blog_roll.url }}">{{ blog_roll.title }}</a></p>
