@@ -87,7 +87,7 @@
 		<!-- START NAVIGATE -->
 		<div id="navigate">
 			<!-- START NAV -->
-			<div id="nav">&nbsp;</div>
+			
 			<!-- START LINKS -->
 			{% capture active_url %}{% if template == "index" %}/{% elsif template == "collection" %}/collections/{{ collection.handle }}{% elsif template == "product" %}{% if collection %}/collections/{{ collection.handle }}{% endif %}/products/{{ product.handle }}{% elsif template == "page" %}/pages/{{ page.handle }}{% elsif template == "blog" %}/blogs/{{ blog.handle }}{% elsif template == "cart" %}/cart{% elsif template == "search" %}/search{% endif %}{% endcapture %}
 			<ul id="links">

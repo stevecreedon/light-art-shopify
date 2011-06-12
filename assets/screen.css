@@ -2,8 +2,8 @@
 body{color:#2c2f2f;font-family:"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;text-align:center;background-color:#fff;}
 div#container{text-align:left;width:894px;min-width:894px;margin:0 auto;}
 div#shadow{background:url(content.png) no-repeat;width:894px;height:307px;}
-div.content{padding:15px 7px 0;}
-div#bg{background-color:#fff;min-height:250px;height:auto!important;height:270px;padding:0 35px 25px;}
+div.content{padding:5px 7px 0;}
+div#bg{background-color:#fff;min-height:250px;height:auto!important;height:270px;padding:0 0 25px;}
 div#roundup{font-size:1px;text-indent:-99999px;background:url(roundup.png) no-repeat;height:10px;}
 div#main{width:590px;padding-bottom:15px;float:left;}
 div#sidebar{width:180px;float:right;}
@@ -14,7 +14,7 @@ a{color:#a2d400;text-decoration:none;}
 div#footer p a,div#header h2 a,ul#links li a,div#gocart a,div.entry h2.title a,ul#results li p a{color:#2c2f2f;}
 a:hover,ul#results li p a:hover{text-decoration:underline;}
 div#header h2 a:hover,div.entry h2.title a:hover{color:#a2d400;text-decoration:none;}
-ul#links li a:hover,div#gocart a:hover{text-decoration:none;}
+ul#links li a:hover,div#gocart a:hover{text-decoration:none;color: #888;}
 div#header{padding:60px 7px 5px;}
 div#header h2{font-size:30px;padding-top:4px;float:left;}
 div#logo,div#logo img,div#hello div{float:left;}
@@ -22,32 +22,15 @@ div#hello{float:right;}
 div#hello p{font-size:18px;text-align:right; color: #aa9184 !important;}
 div#hello p a{font-weight: bold;}
 div#hello p strong{padding-right:3px;}
-div#navigate{height:48px;padding-bottom:20px;position:relative;}
-div#nav{background:url(nav.png) no-repeat;width:880px;min-width:880px;height:44px;padding:1px 7px 3px;position:absolute;}
-ul#links{background:url(links.gif) no-repeat -7px -1px;height:44px;top:1px;left:7px;float:left;overflow:visible;position:absolute;}
-ul#links li{font-size:14px;width:126px;height:44px;float:left;overflow:visible;}
-ul#links li.link-6{width:125px;}
-ul#links li a{font-weight:bold;text-align:center;background:url(links.gif) no-repeat -7px -1px;width:125px;padding:13px 1px 17px 0;display:block;float:left;}
-ul#links li.link-1 a{background-position:-7px -1px;}
-ul#links li.link-1 a:hover{background-position:-7px -49px;}
-ul#links li.link-1 a.active,ul#links li.link-1 a.active:hover{background-position:-7px -97px;}
-ul#links li.link-2 a{background-position:-133px -1px;}
-ul#links li.link-2 a:hover{background-position:-133px -49px;}
-ul#links li.link-2 a.active,ul#links li.link-2 a.active:hover{background-position:-133px -97px;}
-ul#links li.link-3 a{background-position:-259px -1px;}
-ul#links li.link-3 a:hover{background-position:-259px -49px;}
-ul#links li.link-3 a.active,ul#links li.link-3 a.active:hover{background-position:-259px -97px;}
-ul#links li.link-4 a{background-position:-385px -1px;}
-ul#links li.link-4 a:hover{background-position:-385px -49px;}
-ul#links li.link-4 a.active,ul#links li.link-4 a.active:hover{background-position:-385px -97px;}
-ul#links li.link-5 a{background-position:-511px -1px;}
-ul#links li.link-5 a:hover{background-position:-511px -49px;}
-ul#links li.link-5 a.active,ul#links li.link-5 a.active:hover{background-position:-511px -97px;}
-ul#links li.link-6 a{background-position:-637px -1px;padding-right:0;}
-ul#links li.link-6 a:hover{background-position:-637px -49px;}
-ul#links li.link-6 a.active,ul#links li.link-6 a.active:hover{background-position:-637px -97px;}
-div#gocart{font-size:14px;background:url(links.gif) no-repeat -762px -1px;width:125px;height:44px;top:1px;right:7px;float:right;overflow:visible;position:absolute;}
-div#gocart a{font-weight:bold;text-align:right;background:url(links.gif) no-repeat -762px -1px;width:75px;padding:13px 49px 17px 1px;display:block;float:left;}
+div#navigate{height:40px;padding-bottom:20px;position:relative;background-color:#d3c6c0; margin: 0 7px 0 7px;}
+//div#nav{background:url(nav.png) no-repeat;width:880px;min-width:880px;height:44px;padding:1px 7px 3px;position:absolute;}
+ul#links{height:40px;left:7px;float:left;overflow:visible;position:absolute;}
+ul#links li{font-size:14px;height:44px;float:left;overflow:visible;}
+
+ul#links li a{font-weight:bold;text-align:center;padding:13px 10px 17px 10px;display:block;float:left; font-size: 1.2em;}
+
+div#gocart{font-size:14px;width:125px;height:44px;right:7px;float:right;overflow:visible;position:absolute;border-left: 5px white solid;padding-bottom:20px;}
+div#gocart a{font-weight:bold;text-align:right;width:75px;padding:13px 49px 17px 1px;display:block;float:left;}
 div#gocart a:hover{background-position:-762px -49px;}
 div#gocart a.active,div#gocart a.active:hover{background-position:-762px -97px;}
 div#index div#bg,div#product div#bg{padding:0 0 25px;}
@@ -115,7 +98,7 @@ div#images{width:480px;padding:10px 0 10px 35px;float:left;}
 div#images div#image img{float:left;}
 div#images div#thumbs p{font-size:13px;text-align:center;padding-top:20px;display:none;}
 div#images div#thumbs p.active{display:block;}
-div#details{width:285px;padding:30px 35px 15px 0;float:right;}
+div#details{width:285px;padding:15px 35px 15px 0;float:right;}
 div#options,div#buy{padding-top:5px;}
 div#options form{padding-top:15px;border-top:1px solid #e4e4e4;}
 div#options div#variants{padding-bottom:15px;}
@@ -202,3 +185,5 @@ div#footer p{font-size:12px;float:left;}
 div#footer p.links{float:right;}
 div#footer p.links a{margin-left:10px;}
 div#footer p span{display:none;}
+
+.social-links{margin-bottom: 5px;}
