@@ -98,7 +98,7 @@ div#images{width:480px;padding:5px 0 10px 0px;float:left;}
 div#images div#image img{float:left;}
 div#images div#thumbs p{font-size:13px;text-align:center;padding-top:20px;display:none;}
 div#images div#thumbs p.active{display:block;}
-div#details{width:285px;padding:15px 35px 15px 0;float:right;}
+div#details{float: right;}
 div#options,div#buy{padding-top:5px;}
 div#options form{padding-top:15px;border-top:1px solid #e4e4e4;}
 div#options div#variants{padding-bottom:15px;}
@@ -187,3 +187,13 @@ div#footer p.links a{margin-left:10px;}
 div#footer p span{display:none;}
 
 .social-links{margin-bottom: 5px;}
+div#product div#bg{background-color: #eee; padding: 0px;}
+div#product div#desc{background-color: white; padding: 10px;}
+div#product div#image{background-color: white; width: 480px; margin-left: 5px;}
+div#product div#thumbs{margin-top: 5px; background-color: white; padding: 10px; margin-left: 5px; width: 460px;}
+div#product div#details{width: 385px; margin-right: 5px;}
+div#product div.social-links{padding: 10px; margin: 5px 0 5px 0; background-color: white;}
+div#product div#money-back-container{background-color: #fff; margin: 5px 0 5px 0; padding: 20px;}
+div#product div#buy{background-color: #fff; padding: 20px; margin-top: 5px;}
+div#product form{padding: 0px;}
+div#product div#options{padding: 0px;}
