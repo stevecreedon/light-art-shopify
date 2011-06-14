@@ -1,11 +1,17 @@
-<h1>{{ product.title | escape }}</h1>
+<h1>
+{{ product.title | escape }}
+{% if product.available %}
+   - {{ product.variants.first.inventory_quantity }} in stock - {{ product.price | money }}
+{% else %}
+   - out of stock
+{% endif %}
+
+</h1>
 <!-- START SUMMARY -->
 <div id="summary" class="clear">
 	<!-- START IMAGES -->
 	<div id="images">
-                 <div class="social-links">
-			<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
-			       </div>
+             
 		<!-- START IMAGE -->
 		<div id="image" class="clear">
 			<img src="{{ product.images[0] | product_img_url: "large" }}" alt="{{ product.title | escape }}" />
@@ -32,6 +38,9 @@
 	<!-- END IMAGES -->
 	<!-- START DETAILS -->
 	<div id="details">
+		    <div class="social-links">
+		<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
+		       </div>
 		<!-- START DESC -->
 		<div id="desc">
 			{{ product.description }}

@@ -94,7 +94,7 @@ div#paginate div{padding-top:25px;border-top:1px solid #e4e4e4;}
 div#paginate a{padding:0 3px;}
 div#paginate span.current{font-weight:bold;padding:0 3px;}
 div#paginate div a,div#paginate div span.current{padding:0 6px 0 0;}
-div#images{width:480px;padding:10px 0 10px 35px;float:left;}
+div#images{width:480px;padding:5px 0 10px 0px;float:left;}
 div#images div#image img{float:left;}
 div#images div#thumbs p{font-size:13px;text-align:center;padding-top:20px;display:none;}
 div#images div#thumbs p.active{display:block;}
