@@ -1,11 +1,6 @@
+
 <h1>
 {{ product.title | escape }}
-{% if product.available %}
-   - {{ product.variants.first.inventory_quantity }} in stock - {{ product.price | money }}
-{% else %}
-   - out of stock
-{% endif %}
-
 </h1>
 <!-- START SUMMARY -->
 <div id="summary" class="clear">
@@ -32,25 +27,17 @@
                             {% endfor %}
                            {% endif %}
 		</div>
-                <div style="font-size: 0.8em; margin-top: 10px;">photography by <a href="/pages/photography">June Cadogan</a></div>
+        	<div id="money-back-container">
+				<div id="money-back">
+					<b><font class="Apple-style-span" color="#FF0000">We want you to be happy!</font><br/> If you're not just send it back within 30 days for a full refund.</b>
+				</div>
+			</div>
 		<!-- END THUMBS -->
 	</div>
 	<!-- END IMAGES -->
 	<!-- START DETAILS -->
 	<div id="details">
-		    <div class="social-links">
-		<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
-		       </div>
-		<!-- START DESC -->
-		<div id="desc">
-			{{ product.description }}
-		</div>
 		
-	
-		
-		<!-- END DESC -->
-       
-
 		<!-- START OPTIONS -->
 		<div id="options">
 			<form method="post" action="/cart/add" style="border-top: none;">{% if product.variants.size > 1 %}
@@ -75,7 +62,7 @@
 					           &nbsp;&nbsp;<del>{{ product.compare_at_price_max | money }} plus P&P</del>
 					         {% endif %}
 					     </h4>
-					<input type="image" src="{{ "add-to-basket.png" | asset_url }}" alt="BUY THIS" id="add" />
+					<input type="image" src="{{ 'add-me-to-your-basket.png?v1' | asset_url }}" alt="BUY THIS" id="add" />
 					{% else %}
 					    <h6>Sold Out</h6>
 					    <p><a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">we'll tell you when it's back in stock</a></p>
@@ -86,11 +73,23 @@
 		</div>
 		<!-- END OPTIONS -->
 		
-		<div id="money-back-container">
-			<div id="money-back">
-				<b><font class="Apple-style-span" color="#FF0000">We want you to be happy!</font><br/> If you're not just send it back within 30 days for a full refund.</b>
-			</div>
+		
+		<div class="social-links">
+				<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
 		</div>
+		<!-- START DESC -->
+		<div id="desc">
+			{{ product.description }}
+		</div>
+		
+	
+		
+		<!-- END DESC -->
+       
+
+		
+		
+	
 		
 	</div>
 	<!-- END DETAILS -->

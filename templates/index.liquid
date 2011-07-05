@@ -1,18 +1,116 @@
 <script>
-   $(document).ready(function(){
-       $("#onion-dogs").click(function(){window.location = "/collections/onion-dog"});
-   })
+   
+    var LightArt = {
+    	Splasher: {
+			splasherIndex: 0,
+			splasherCount: 0,
+			splashId: null,
+			splashImageId: null,
+			splashImages: null,
+			splashTextId: null,
+			splasherTops: function(height){
+				var top = 0; 
+				$(LightArt.Splasher.splashImageId).children().each(function(){
+					$(this).css("top", top + "px");
+					top -= height;
+				});
+			},
+			go: function(){
+				
+				if(LightArt.Splasher.imagesLoaded()){
+					LightArt.Splasher.slideDiv();
+				}else{
+					window.setTimeout("LightArt.Splasher.go()",250);
+				}
+			},
+			imagesLoaded: function(){
+				LightArt.Splasher.splashImages.each(function(){
+					if(!this.complete){
+						return false;
+					}
+					
+				})
+				return true;
+			},
+			init: function(args){
+				LightArt.Splasher.splasherCount = args.count;
+				LightArt.Splasher.splashId = args.splash;
+				LightArt.Splasher.splashImageId = args.splashImage;
+				LightArt.Splasher.splashImages = $(args.splashImage).find("img");
+				LightArt.Splasher.splashTextId = args.splashText;
+				LightArt.Splasher.splasherTops(args.image_height);
+				LightArt.Splasher.go();
+			},
+			slideDiv: function(){			
+				if (LightArt.Splasher.splasherIndex > LightArt.Splasher.splashImages.length)
+				    return;
+
+				LightArt.Splasher.splasherIndex++;
+				i = LightArt.Splasher.splasherIndex
+				
+				$(LightArt.Splasher.splashImageId).find("div:nth-child(" + i + ")").animate({left: (i*220 - 220)}, 1000, null, LightArt.Splasher.fadeInDiv(i));
+			},
+			fadeInDiv: function(i){
+				$(LightArt.Splasher.splashTextId).find("div:nth-child(" + i + ")").fadeIn(1000, LightArt.Splasher.slideDiv)
+			}
+		}
+	}
+	
+	
+	$(document).ready(function(){
+	   	LightArt.Splasher.init({width: 880, 
+									image_height: 200, 
+									text_height: 200, 
+									count: 4, 
+									splash: '#splasher', 
+									splashText: '#splash-text',
+									splashImage: '#splash-images'});     
+	
+	});
+	
+	
+	
 </script>
 <!-- START SHOWCASE -->
-<div id="showcase">
- <h1 id="home-h1">&nbsp;We design fun, offbeat things that <a href="/collections/fun-lights">light up</a>. We sell them too.</h1>
- <div id="onion-dogs" style="cursor: pointer;">
-	<!--
- 	<div id="sorry" style="clear: both;">
- 		<div>Sorry...</div>
-		that we're out of stock on so many items. The things we make are hand crafted and sometimes we sell them faster than we can make them. We're hoping to get new stock immediately after Easter 2011. If you would like us to tell you when we have stock on any particular item then we'd be <a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">happy to let you know</a>. We don't want to waste your time so these are things we <a href="/collections/light-art-items-in-stock">currently have in stock</a>.
- 	</div> -->
- </div>
+
+ <h1>Original, Handmade Lamps by Myra Heller.</h1>
+
+		<div id="splasher">
+			<div id="splash-images" style="position: relative;">
+				<div style="background-color: #c9d9e0;" class="image block">
+					<img src="{{'blake_tiger_cub_lamp_off.png' | asset_url}}">
+				</div>
+				<div style="background-color: black;" class="image block">
+					<img src="{{'blake_tiger_cub_lamp_on.png' | asset_url}}">
+				</div>
+				<div style="background-color: #979a9e;" class="image block">
+				    <img src="{{'white_bull_terrier_lamp_off.png' | asset_url}}">	
+				</div>
+				<div style="background-color: orange;" class="image block">
+					<img src="{{'white_bull_terrier_lamp_on.png' | asset_url}}">
+				</div>
+			</div>
+			<div id="splash-text">
+				<div style="background-color: #c9d9e0;" class="text block white">
+					<h2><a href="/collections/original-table-lamps" style="text-decoration: none;">Original</a><span class="dot">.</span></h2>
+					<p>Because everything seems to be copied these days.</p>
+				</div>
+							
+				<div style="background-color: black;" class="text block black">
+					<h2><a href="/collections/fun-table-lamps" style="text-decoration: none;">Fun</a><span class="dot">.</span></h2>
+					<p>Because that's who we are.</p>
+				</div>
+				<div style="background-color: #876f5d;" class="text block brown">
+					<h2><a href="/collections/inexpensive-table-lamps" style="text-decoration: none;">Inexpensive</a><span class="brown_dot">.</span></h2>
+					<p>So that anyone can enjoy the things we make.</p>
+				</div>
+				<div style="background-color: #b25500;" class="text block orange">
+					<h2><a href="/collections/handmade-table-lamps" style="text-decoration: none;">Handmade</a><span class="orange_dot">.</span></h2>
+					<p>Because not everything need come from a factory.</p>
+				</div>
+			</div>
+		</div>
+
 
  <div id="testimonials">
  	<div class="testimonial">
@@ -30,5 +128,5 @@ Thanks so much.""
     </div>
  </div>
  
-</div>
+
 <!-- END SHOWCASE -->
