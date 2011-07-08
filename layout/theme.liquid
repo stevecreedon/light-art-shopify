@@ -154,22 +154,14 @@
 		<!-- START OVERVIEW -->
 		<div id="overview" style="padding-top: 10px;">
 			<ul class="clear">
-				<li>
-					<h3>{{ pages.frontpage.title | escape }}</h3>
-					<p>{{ pages.frontpage.content | strip_html | strip_newlines | truncate: 200 }}</p>
-					<p><a href="/pages/frontpage">Read More</a></p>
-				</li>
-				<li>
-					<h3>From Our Blog</h3>{% for article in blogs.news.articles limit: 1 %}
-					<h5>{{ article.title | escape }}</h5>
-					<p>{{ article.content | strip_html | strip_newlines | truncate: 150 }}</p>
-					<p><a href="{{ article.url }}">Read More</a></p>{% endfor %}
-				</li>
-				<li>
-					<h3>{{ pages.light-dogs.title | escape }}</h3>
-					<p>{{ pages.light-dogs.content | strip_html | strip_newlines | truncate: 200 }}</p>
-					<p><a href="/pages/about-us">Read More</a></p>
-				</li>
+				{% for article in blogs.news.articles limit: 3 %}
+				 	<li>
+						<h3><a href="{{ article.url }}">{{ article.title | escape }}</a></h3>
+						<p>{{ article.content | strip_html | strip_newlines | truncate: 150 }}</p>
+						<p><a href="{{ article.url }}">Read More</a></p>
+					</li>
+				{% endfor %}
+				
 			</ul>
 		</div>
 		<!-- END OVERVIEW -->
