@@ -4,6 +4,7 @@
 </h1>
 <!-- START SUMMARY -->
 <div id="summary" class="clear">
+	
 	<!-- START IMAGES -->
 	<div id="images">
              
@@ -59,13 +60,18 @@
 					     <h4 id="price">
 						     <span>{{ product.price | money }}</span>
 					         {% if product.compare_at_price_max > product.price %} 
-					           &nbsp;&nbsp;<del>{{ product.compare_at_price_max | money }} plus P&P</del>
+					           &nbsp;&nbsp;<del>{{ product.compare_at_price_max | money }} plus P&amp;P</del>
 					         {% endif %}
 					     </h4>
-					<input type="image" src="{{ 'add-me-to-your-basket.png?v1' | asset_url }}" alt="BUY THIS" id="add" />
+					     <input type="image" src="{{ 'add-me-to-your-basket.png?v1' | asset_url }}" alt="BUY THIS" id="add" />
 					{% else %}
-					    <h6>Sold Out</h6>
-					    <p><a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">we'll tell you when it's back in stock</a></p>
+						
+						{% if product.tags contains 'coming soon' %}
+							<h6>Coming Soon!</h6>
+						{% else %} 
+							<h6>Sold Out</h6>
+						{% endif %}
+						<p><a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">click here to find out when it's in stock</a></p>	
 					{% endif %}
 				</div>
 				<!-- END BUY -->

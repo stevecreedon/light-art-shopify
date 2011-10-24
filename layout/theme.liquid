@@ -7,8 +7,8 @@
     <script type="text/javascript">stLight.options({publisher:'e820f19b-d15d-4aee-98b4-b092c90f367b'});</script>
         
     {% if template == "index" %}
-       <title>Unusual Lamps & Lights | Fun Table Lamps by Light Art</title>
-       <meta name="description" content="Light Art designs & crafts fun, colourful retro lamps and table lamps" />
+       <title>Unusual Lamps &amp; Lights | Fun Table Lamps by Light Art</title>
+       <meta name="description" content="Light Art designs &amp; crafts fun, colourful retro lamps and table lamps" />
     {% endif %}
    
     {% if template == "collection" %}
@@ -18,12 +18,14 @@
 
     {% if template == "product" %}
        <title>{{ page_title | escape }} | Table Lamp | Fun Lighting</title>
-       <meta name="description" content="{{ product.title | escape }} &mdash; Signed by award-winning artist Myra Heller & hand-finished in Germany by Heico" />
+       <meta name="description" content="{{ product.title | escape }} &mdash; Signed by award-winning artist Myra Heller &amp; hand-finished in Germany by Heico" />
+       <!-- Facebook ignores this comment out
        <meta property="og:title" content="{{product.title}}" />
        <meta property="og:type" content="product" />
        <meta property="og:url" content="{{shop.url}}{{product.url}}" />
        <meta property="og:image" content="{{ product.images.first | product_img_url: 'small' }}" />
        <meta property="og:site_name" content="Light Art Studio"/>
+       -->
     {% endif %}
 
     {% unless template == "collection" or template == "product" or template == "index" %}
@@ -42,6 +44,10 @@
 	{{ "reset.css" | asset_url | stylesheet_tag }}
 	{{ "screen.css" | asset_url | stylesheet_tag }}
 	{{ "theme.css" | asset_url | stylesheet_tag }}
+	{{ "colorbox.css" | asset_url | stylesheet_tag }}
+	
+	<link href='http://fonts.googleapis.com/css?family=Carme' rel='stylesheet' type='text/css'>
+	
 	<!--[if lte IE 6]>{{ "ie6.css" | asset_url | stylesheet_tag }}<![endif]-->
 	
 	{% if template == "product" %}{% if product.available %}{% if product.variants.size > 1 %}
@@ -50,14 +56,20 @@
 	
 	<script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAtVDf2m59ZK9HMIFOFoOw_xSKcUbIJEvF0HYfjKMeHrmrR8U_LRQvYsrheclbLMU49licJQRWF9p2hg"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		
 	
-	
-
 	{{ "jquery-slimbox-2-02.js" | asset_url | script_tag }}
-
+    {{ "jquery.colorbox-min.js" | asset_url | script_tag }}
 	{{ "jquery-theme-1-0.js" | asset_url | script_tag }}
 	{{ "jquery.hoverIntent.minified.js" | asset_url | script_tag }}
+	{{ "jquery.defaultvalue.js" | asset_url | script_tag }}
+	{{ "jquery.blockUI.js" | asset_url | script_tag }}
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".cboxElement").colorbox({iframe: true, width:500, height: 350});
+		})
+	</script>
+	
 </head>
 
 <body>
@@ -67,7 +79,7 @@
 		<div id="header" class="clear">
 			<!-- START LOGO -->{% if settings.logo == "enabled" %}
 			<div id="logo">
-				<a href="/"><img src="{{ "logo.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
+				<a href="/"><img src="{{ "light-art-exclusive-table-lamp-design.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
 			</div>{% else %}
 			<h2><a href="/">{{ shop.name | escape }}</a></h2>{% endif %}
 			<!-- END LOGO -->{% if settings.phone.size > 0 or settings.email.size > 0 %}

@@ -7,15 +7,47 @@
 <div id="collection-bg" class="rounded3">
 	<div id="collection-description">
 		{{ collection.description }}
-	</div>	
+	</div>
+<!--	<div class="seen-at rounded3">Seen at: <a href="http://twitter.com/#!/GonzoWithAlexa/status/54895881769594880">MTVs Gonzo with Alexa</a><a href="http://latenighttales.co.uk/product.php/3/arctic-monkeys">Matt Helder's Late Night Tales</a><a href="http://es.homesandproperty.co.uk/your_home_and_garden/shopping_and_design_news/designnewsanimals20100818.html">Home &amp; Property</a></div> -->	
 	<ul id="products" class="clear">{% for product in collection.products %}
 		<!-- START PRODUCT {{ forloop.index }} -->
 		<li{% cycle ' class="rounded3"', ' class="rounded3"',' class="rounded3 end"' %}>
-		    <a href="{{ product.url }}">{{ 'view-me.png' | asset_url | img_tag }}</a>
+		  <a href="{{ product.url }}">
+		    <div class="collection-product-banner">
+		    	{% if product.title contains 'Onion' %} 
+				  Onion...
+				{% endif %}
+				
+				{% if product.title contains 'Blake' %} 
+				  Blake...
+				{% endif %}
+				
+				{% if product.title contains 'Archie' %} 
+				  Archie...
+				{% endif %}
+				
+				{% if product.title contains 'Diego' %} 
+				  Diego...
+				{% endif %}
+				
+				{% if product.title contains 'Poppy' %} 
+				  Poppy...
+				{% endif %}
+				
+				{% if product.title contains 'Pauli' %} 
+				  Pauli...
+				{% endif %}
+		    </div>
+		</a>	
+		 
 			<!-- START IMAGE -->
 			<div class="image">
 				<div class="align">
-					<div><a href="{{ product.url }}"><img src="{{ product.images[0] | product_img_url: "medium" }}" alt="{{ product.title | escape }}" /></a></div>
+					<div>
+						<a href="{{ product.url }}">
+							<img src="{{ product.images[0] | product_img_url: "medium" }}" alt="{{ product.title | escape }}" />
+						</a>
+					</div>
 				</div>
 			</div>
 			<!-- END IMAGE -->
