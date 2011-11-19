@@ -1,0 +1,123 @@
+body{
+	background-color: #ed9017;
+	background-image: url(strypes.png);
+	background-repeat: repeat-x;
+	font-family: 'Droid Sans', arial, sans-serif;
+	font-size: 24px;
+}
+
+a {color: #26fb03;}
+
+#container{
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+
+.yellow{
+	background-color: #f7c300;
+	padding: 10px;
+}
+
+.yellow-left{
+	border-right: 10px solid #f7c300;
+	float: left;
+	background-color: black;
+}
+
+.shine-a-light{
+	text-align: right;
+	width: 670px;
+}
+
+.black{
+	background-color: black;
+}
+
+.black p, .black ul{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+
+.text-area{
+	font-size: 0.9em;
+}
+
+.text-area p, .text-area ol, .text-area h2{
+	margin-left: 480px;
+	margin-right: 60px;
+	clear: both;
+}
+
+.text-area h2{
+	text-decoration: italic;
+	font-size: 1.4em;
+}
+
+#make-a-difference{
+	background-image: url(make-a-difference-circle.png);
+	background-repeat: no-repeat;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	background-position: 53px 0;
+}
+
+#light-art-and-21century-tiger{
+	background-image: url(light-art-and-21st-century-tiger-circle.png);
+	background-repeat: no-repeat;
+	padding-top: 15px;
+	padding-bottom: 100px;
+}
+
+#grass td{
+	vertical-align: top;
+	padding: 20px;
+}
+
+#you-can-help-wild-tigers{
+	background-image: url(meet-blake-circle.png);
+	background-repeat: no-repeat;
+	background-position: 50px 0;
+	padding-top: 5px;
+	height: 700px;	
+}
+
+#grass{
+	background-image: url(grass.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+#badge-pop-up{
+	text-align: left;
+	background-image: url(blake-pop-up.png);
+	width: 650px;
+	background-color: black;
+	color: white;
+	display: none; 
+	font-size: 0.8em;
+	background-repeat: no-repeat;
+}
+
+#badge-content{
+	padding: 20px 20px 20px 200px;
+	font-size: 0.8em;
+}
+
+.black h1{
+	text-align: center;
+}
+
+td {
+	color : white;
+}
+
+.add_this_tiger{
+	margin-left: 40px;
+}

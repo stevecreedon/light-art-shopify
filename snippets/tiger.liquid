@@ -1,0 +1,37 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="tiger.css" />
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+{{ "jquery.blockUI.js" | asset_url | script_tag }}
+{{ "tiger.css" | asset_url | stylesheet_tag }}
+{{ content_for_header }}
+
+<script>	
+    code = '<div><a href="http://www.light-art.co.uk/pages/tiger-appeal?s=size" title="go to blake the wild tiger cub home page"><img style="border: none;" src="https://s3-eu-west-1.amazonaws.com/blakewidget/blake-tiger-cub-badge_size.png" alt="blake the wild tiger cub badge"></a></div>'
+   
+	$(document).ready(function(){
+		
+		$("#get-the-badge").click(function(){
+			$.blockUI({message: $("#badge-pop-up"), css: {width: 650, height: 210, borderColor: '#f7c300', backgroundColor: '#000000'}});
+			return false;
+		});
+		
+		$("#badge-select").change(function(){
+			size = $("#badge-select").val();
+			
+			if(size == ""){
+				$("#badge-code").val("");
+			}else{
+				$("#badge-code").val(code.replace(/size/g,size));
+			}
+			
+		});
+		
+		$("#badge-pop-up-close").click(function(){
+			$.unblockUI();
+		});
+		
+	})
+</script>

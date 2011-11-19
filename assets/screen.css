@@ -94,8 +94,9 @@ div#paginate div{padding-top:25px;border-top:1px solid #e4e4e4;}
 div#paginate a{padding:0 3px;}
 div#paginate span.current{font-weight:bold;padding:0 3px;}
 div#paginate div a,div#paginate div span.current{padding:0 6px 0 0;}
-div#images{width:480px;padding:5px 0 10px 0px;float:left;}
-div#images div#image img{float:left;}
+div#images{width:480px;padding:0px 0 10px 0px;float:left;}
+/div#images div#image img{float:center;}
+div#image {text-align: center; background-image: url(stripes.png?v1); padding-top: 10px;}
 div#images div#thumbs p{font-size:13px;text-align:center;padding-top:20px;display:none;}
 div#images div#thumbs p.active{display:block;}
 div#details{float: right;}
@@ -188,15 +189,29 @@ div#footer p span{display:none;}
 
 .social-links{margin-bottom: 5px;}
 div#product div#bg{padding: 0px;}
-div#product div#desc{background-color: white; padding: 10px;}
-div#product div#image{background-color: white; width: 480px; margin-left: 5px;}
+div#product div#desc{background-color: white; padding: 0 10px 10px 10px;}
+div#product div#image{background-color: white; width: 480px; }
 div#product div#thumbs{margin-top: 5px; background-color: white; padding: 10px; margin-left: 5px; width: 460px;}
 div#product div#details{width: 385px; margin-right: 5px;}
 div#product div.social-links{padding: 10px; margin: 5px 0 5px 0; background-color: white;}
 div#product div#money-back-container{background-color: #fff; padding: 20px; margin: 5px 0 0 5px; width: 440px;}
 div#product div#buy{background-color: #fff; padding: 20px; margin: 5px 0 5px 0;}
+div#product div#for{background-color: #fff; margin: 5px 0 5px 0; padding-left: 10px;}
+div#product div#features{background-color: #fff; margin: 5px 0 5px 0; padding: 10px;}
+div#product div#features ul {}
+div#product div#features li {min-height: 28px; padding-left: 40px; background-image: url('disc.png?v1'); background-repeat: no-repeat; margin-bottom: 10px; background-position: 0 3px;}
+div#product div#delivery{background-color: #fff; margin: 5px 0 5px 0; padding: 10px 20px 10px 10px;}
+div#product div#delivery p{margin-bottom: 10px;}
+
+div#product div#for h2 {color: #999; background-color: white; padding:5px 0 0 0px;}
+div#product div#desc h2 {color: #999; background-color: white; padding:5px 0 0 0px; margin-bottom: 10px;}
+div#product div#also-like h2{color: #999; background-color: white; padding:5px 0 0 0px;}
+
 div#product form{padding: 0px;}
 div#product div#options{padding: 0px;}
+
+div#product div#also-like{background-color: #fff; margin: 5px -5px 5px 5px; padding: 0px 20px 10px 10px;}
+div#product div.also-like-image-container{float: left; margin: 10px 10px 10px 0;}
 
 div#summary{background-color: #eee;}
 
@@ -256,10 +271,10 @@ div#collection  h2 {clear: both;
 div#collection  h3 span{font-size: 2em; color:orange}
 
 .collection-product-banner{
-	background-color: #312f32;
+	background-image: url(stripes.png?v1);
+	background-color: #444;
 	font-family: 'carme', 'sans-serif';
-	color: #cae255;
-	padding: 4px 0px 0px 4px;
+	padding: 4px 0px 0px 10px;
 	font-size: 1.4em;
 }
 
@@ -403,7 +418,7 @@ ul#products{
 
 ul#products li{
 	margin: 0px 0px 15px 5px;
-	background-color: #312f32;
+	background-image: url(stripes.png?v1);
 }
 
 ul#products li img{
@@ -521,4 +536,25 @@ div.seen-at a{
 	border-left: solid black 5px;
 	padding-left: 5px;
 	margin-left: 10px;
-} 
+}
+
+td.bullet-title{
+	background-color: #3a3a30;
+	color: white;
+	width: 130px;
+	text-align: right;
+	padding: 10px 5px 0 0;
+}
+
+ul.bullet-list{
+	background-color: white;
+	padding: 10px 0 10px 5px;
+	width: 245px;
+}
+
+
+
+
+
+
+ 

@@ -12,7 +12,7 @@
 	<ul id="products" class="clear">{% for product in collection.products %}
 		<!-- START PRODUCT {{ forloop.index }} -->
 		<li{% cycle ' class="rounded3"', ' class="rounded3"',' class="rounded3 end"' %}>
-		  <a href="{{ product.url }}">
+		  <a href="{{ product.url }}" style="color: white;">
 		    <div class="collection-product-banner">
 		    	{% if product.title contains 'Onion' %} 
 				  Onion...

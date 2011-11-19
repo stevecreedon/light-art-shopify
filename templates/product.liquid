@@ -1,13 +1,19 @@
+<!-- start social -->
+<div class="social-links">
+	<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
+</div>
+<!-- end social -->
 
-<h1>
-{{ product.title | escape }}
-</h1>
-<!-- START SUMMARY -->
+
+
+<!-- START CONTENT -->
 <div id="summary" class="clear">
 	
 	<!-- START IMAGES -->
 	<div id="images">
-             
+
+       <h1>{{ product.title | escape }}</h1>    
+         
 		<!-- START IMAGE -->
 		<div id="image" class="clear">
 			<img src="{{ product.images[0] | product_img_url: "large" }}" alt="{{ product.title | escape }}" />
@@ -28,18 +34,17 @@
                             {% endfor %}
                            {% endif %}
 		</div>
-        	<div id="money-back-container">
-				<div id="money-back">
-					<b><font class="Apple-style-span" color="#FF0000">We want you to be happy!</font><br/> If you're not just send it back within 30 days for a full refund.</b>
-				</div>
-			</div>
+		
+		{% include 'also_like' %}
+        
 		<!-- END THUMBS -->
 	</div>
 	<!-- END IMAGES -->
-	<!-- START DETAILS -->
+	
+	<!-- START RIGHT COL -->
 	<div id="details">
 		
-		<!-- START OPTIONS -->
+		<!-- buy buttons -->
 		<div id="options">
 			<form method="post" action="/cart/add" style="border-top: none;">{% if product.variants.size > 1 %}
 				<!-- START VARIANTS -->
@@ -77,27 +82,46 @@
 				<!-- END BUY -->
 			</form>
 		</div>
-		<!-- END OPTIONS -->
+		<!-- END buy buttons -->
 		
-		
-		<div class="social-links">
-				<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
+		<div id="for">
+			<h2>People who like this are often:</h2>
+			{% if product.metafields.product.for contains 'kids' %}
+				{{ 'suitable-for-kids.png' | asset_url | img_tag }}
+			{% endif %}
+			
+			{% if product.metafields.product.for contains 'dads' %}
+				{{ 'suitable-for-dads.png' | asset_url | img_tag }}
+			{% endif %}
+			
+			{% if product.metafields.product.for contains 'cool' %}
+				{{ 'suitable-for-cool.png' | asset_url | img_tag }}
+			{% endif %}
 		</div>
+		
+		<div id="features">
+			{% include 'features' %}
+		</div>
+		
+		<div id="delivery">
+			<p><span style="font-weight: bold; background-color: #FC0361; color: white; padding: 2px;">Free Delivery</span> anywhere in the UK.</p>
+			<p><span style="font-weight: bold;  background-color: #FC0361; color: white; padding: 2px;">We also deliver worldwide</span> but have to charge an extra £10 for that, sorry.</p> 
+			{% if product.metafields.product.features contains 'LED' %}
+			<p><span style="font-weight: bold;  background-color: #FC0361; color: white; padding: 2px;">Lifetime Guarantee</span> on electrical components.</p> 
+			{% endif %}
+		</div>	
+		
+
+		
 		<!-- START DESC -->
 		<div id="desc">
+			<h2>More about {{ product.metafields.product.name | capitalize }}:</h2>
 			{{ product.description }}
 		</div>
-		
-	
-		
 		<!-- END DESC -->
        
 
-		
-		
-	
-		
 	</div>
-	<!-- END DETAILS -->
+	<!-- END RIGHT COL-->
 </div>
-<!-- END SUMMARY -->
+<!-- END CONTENT -->

@@ -1,0 +1,47 @@
+onion:
+    product:
+        name: onion
+        gender: male
+        features: NA
+        for: dads, cool
+        height: 12
+
+blake:
+    product:
+        name: blake
+        gender: male
+        features: LED
+        for: kids
+        height: 12
+
+archie:
+    product:
+        name: archie
+        gender: male
+        features: LED
+        for: dads, cool
+        height: 15
+
+diego:
+    product:
+        name: diego
+        gender: male
+        features: NA
+        for: kids, dads, cool
+        height: 12
+        
+poppy:
+    product:
+        name: poppy
+        gender: female
+        features: NA
+        for: kids, cool
+        height: 11
+        
+pauli:
+    product:
+        name: pauli
+        gender: male
+        features: NA
+        for: kids
+        height: 8
