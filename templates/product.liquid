@@ -12,8 +12,10 @@
 	<!-- START IMAGES -->
 	<div id="images">
 
-       <h1>{{ product.title | escape }}</h1>    
-         
+       <div class="gift-tag">
+        <img class="gift-tag-img" src="{{ 'tag.png' | asset_url }}"/>
+		<h1>{{ product.title | escape }}</h1>    
+       </div>  
 		<!-- START IMAGE -->
 		<div id="image" class="clear">
 			<img src="{{ product.images[0] | product_img_url: "large" }}" alt="{{ product.title | escape }}" />
@@ -74,7 +76,7 @@
 						{% if product.tags contains 'coming soon' %}
 							<h6>Coming Soon!</h6>
 						{% else %} 
-							<h6>Sold Out</h6>
+							<h6>They've all gone!</h6>
 						{% endif %}
 						<p><a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">click here to find out when it's in stock</a></p>	
 					{% endif %}

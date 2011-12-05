@@ -12,31 +12,9 @@
 	<ul id="products" class="clear">{% for product in collection.products %}
 		<!-- START PRODUCT {{ forloop.index }} -->
 		<li{% cycle ' class="rounded3"', ' class="rounded3"',' class="rounded3 end"' %}>
-		  <a href="{{ product.url }}" style="color: white;">
+		  <a href="{{ product.url }}" style="color: #666; font-size: 1.4em;">
 		    <div class="collection-product-banner">
-		    	{% if product.title contains 'Onion' %} 
-				  Onion...
-				{% endif %}
-				
-				{% if product.title contains 'Blake' %} 
-				  Blake...
-				{% endif %}
-				
-				{% if product.title contains 'Archie' %} 
-				  Archie...
-				{% endif %}
-				
-				{% if product.title contains 'Diego' %} 
-				  Diego...
-				{% endif %}
-				
-				{% if product.title contains 'Poppy' %} 
-				  Poppy...
-				{% endif %}
-				
-				{% if product.title contains 'Pauli' %} 
-				  Pauli...
-				{% endif %}
+				{{ product.metafields.product.name }}
 		    </div>
 		</a>	
 		 
@@ -51,9 +29,7 @@
 				</div>
 			</div>
 			<!-- END IMAGE -->
-			<h3><a href="{{ product.url }}">{{ product.title | escape | truncate: 25 }}</a></h3>
-			<p>{{ product.price | money }}{% if product.compare_at_price_max > product.price %} <del>{{ product.compare_at_price_max | money }}</del>{% endif %}</p>
-			
+						
 		</li>
 		<!-- END PRODUCT {{ forloop.index }} -->{% endfor %}
 	</ul>{% else %}

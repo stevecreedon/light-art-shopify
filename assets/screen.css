@@ -17,7 +17,7 @@ div#header h2 a:hover,div.entry h2.title a:hover{color:#a2d400;text-decoration:n
 ul#links li a:hover,div#gocart a:hover{text-decoration:none;color: #888;}
 div#header{padding:10px 7px 5px; position: relative;}
 div#header h2{font-size:30px;padding-top:4px;float:left;}
-div#logo,div#logo img{float:left; font-family: 'carme', sans-serif;position: relative; left: -45px;}
+div#logo,div#logo img{float:left; font-family: 'carme', sans-serif;position: relative; left: -17px;}
 div#hello{float:right; margin-top: 10px;}
 div#hello p{font-size:18px;text-align:right; color: #aa9184 !important;}
 div#hello p a{}
@@ -271,10 +271,16 @@ div#collection  h2 {clear: both;
 div#collection  h3 span{font-size: 2em; color:orange}
 
 .collection-product-banner{
-	background-image: url(stripes.png?v1);
+	margin-top: 20px;
+	margin-left: 50px;
+	width: 150px;
+	font-size: 1.4em;
+	font-family: rokkitt;
+	text-align: center;
+	/*background-image: url(stripes.png?v1);
 	background-color: #444;
 	font-family: 'carme', 'sans-serif';
-	padding: 4px 0px 0px 10px;
+	padding: 4px 0px 0px 10px;*/
 	font-size: 1.4em;
 }
 
@@ -418,11 +424,15 @@ ul#products{
 
 ul#products li{
 	margin: 0px 0px 15px 5px;
-	background-image: url(stripes.png?v1);
+	background-image: url(white-box.png?v6);
+	height: 338px;
 }
 
 ul#products li img{
-	border: 5px solid #231f20;
+	border-left: 1px solid #888;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	border-top: 1px solid #888;
 }
 
 div#collection-bg{
@@ -551,6 +561,21 @@ ul.bullet-list{
 	padding: 10px 0 10px 5px;
 	width: 245px;
 }
+
+.gift-tag-img{
+	position: relative;
+	left: -159px;
+	top: 15px;
+}
+
+.gift-tag{
+	background-color: #b00031;
+}
+
+.product-h1-text{
+
+}
+
 
 
 
