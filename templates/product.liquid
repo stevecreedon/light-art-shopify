@@ -2,9 +2,14 @@
 <div class="social-links">
 	<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
 </div>
+{% if product.metafields.product.name == 'archie' %}
+<div style="text-align: right;"><a href="http://www.facebook.com/pages/Archie-the-Whippet/228735777206964"><img src="{{ 'follow.png' | asset_url }}"/></a></div>
+{% endif %}
 <!-- end social -->
 
-
+   <div class="gift-tag">
+	<h1 style="margin-top: 5px;">{{ product.title | escape }}</h1>    
+   </div>
 
 <!-- START CONTENT -->
 <div id="summary" class="clear">
@@ -12,10 +17,7 @@
 	<!-- START IMAGES -->
 	<div id="images">
 
-       <div class="gift-tag">
-        <img class="gift-tag-img" src="{{ 'tag.png' | asset_url }}"/>
-		<h1>{{ product.title | escape }}</h1>    
-       </div>  
+    
 		<!-- START IMAGE -->
 		<div id="image" class="clear">
 			<img src="{{ product.images[0] | product_img_url: "large" }}" alt="{{ product.title | escape }}" />
@@ -86,20 +88,7 @@
 		</div>
 		<!-- END buy buttons -->
 		
-		<div id="for">
-			<h2>People who like this are often:</h2>
-			{% if product.metafields.product.for contains 'kids' %}
-				{{ 'suitable-for-kids.png' | asset_url | img_tag }}
-			{% endif %}
-			
-			{% if product.metafields.product.for contains 'dads' %}
-				{{ 'suitable-for-dads.png' | asset_url | img_tag }}
-			{% endif %}
-			
-			{% if product.metafields.product.for contains 'cool' %}
-				{{ 'suitable-for-cool.png' | asset_url | img_tag }}
-			{% endif %}
-		</div>
+
 		
 		<div id="features">
 			{% include 'features' %}

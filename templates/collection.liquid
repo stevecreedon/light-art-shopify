@@ -23,13 +23,17 @@
 				<div class="align">
 					<div>
 						<a href="{{ product.url }}">
-							<img src="{{ product.images[0] | product_img_url: "medium" }}" alt="{{ product.title | escape }}" />
+							<img class="collection-image" src="{{ product.images[0] | product_img_url: "medium" }}" alt="{{ product.title | escape }}" />
 						</a>
 					</div>
 				</div>
 			</div>
 			<!-- END IMAGE -->
-						
+			{% if product.metafields.product.name == 'archie' or product.metafields.product.name == 'blake' %}
+			<a href="{{ product.url }}">
+		    	<img class="new-product" src="{{ 'new.png' | asset_url }}" />
+		    </a>
+		    {% endif %}				
 		</li>
 		<!-- END PRODUCT {{ forloop.index }} -->{% endfor %}
 	</ul>{% else %}

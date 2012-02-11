@@ -16,14 +16,24 @@
 </head>
 
 {% if template != 'page' or page.handle != 'tiger-appeal' %}
-<body>	
+<body>
+	
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+		
 	<!-- START CONTAINER -->
 	<div id="container">
 		<!-- START HEADER -->
 		<div id="header" class="clear">
 			<!-- START LOGO -->{% if settings.logo == "enabled" %}
 			<div id="logo">
-				<a href="/"><img src="{{ "light-art-lamps-logo.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
+				<a href="/"><img src="{{ "logopink.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
 			</div>{% else %}
 			<h2><a href="/">{{ shop.name | escape }}</a></h2>{% endif %}
 			<!-- END LOGO -->{% if settings.phone.size > 0 or settings.email.size > 0 %}
@@ -150,6 +160,14 @@
 		});
 		// ]]>
 	</script>{% endif %}{% endif %}{% endif %}
+	
+	<script type="text/javascript">
+	setTimeout(function(){var a=document.createElement("script");
+	var b=document.getElementsByTagName('script')[0];
+	a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0012/0078.js?"+Math.floor(new Date().getTime()/3600000);
+	a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+	
 </body>
 {% endif %}
 
@@ -171,6 +189,9 @@
 		</div>
 		
 	</div>
+	
+
+	
 	</body>
 {% endif %}
 

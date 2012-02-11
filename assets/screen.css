@@ -1,5 +1,5 @@
 /* Designed and hand-coded by http://www.pixellent.com. Copyright (c) Pixellent, LLC. All rights reserved. */
-body{color:#2c2f2f;font-family:"Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;text-align:center;background-color:#fff;}
+body{color:#2c2f2f;font-family: 'Josefin Sans', arial, sans-serif;text-align:center;background-color:#fff;}
 div#container{text-align:left;width:894px;min-width:894px;margin:0 auto;}
 div#shadow{background:url(content.png) no-repeat;width:894px;height:307px;}
 div.content{padding:5px 7px 0;}
@@ -17,12 +17,12 @@ div#header h2 a:hover,div.entry h2.title a:hover{color:#a2d400;text-decoration:n
 ul#links li a:hover,div#gocart a:hover{text-decoration:none;color: #888;}
 div#header{padding:10px 7px 5px; position: relative;}
 div#header h2{font-size:30px;padding-top:4px;float:left;}
-div#logo,div#logo img{float:left; font-family: 'carme', sans-serif;position: relative; left: -17px;}
+div#logo,div#logo img{float:left; font-family: 'Josefin Sans', sans-serif;position: relative; left: -27px;}
 div#hello{float:right; margin-top: 10px;}
 div#hello p{font-size:18px;text-align:right; color: #aa9184 !important;}
 div#hello p a{}
 div#hello p strong{padding-right:3px;}
-div#navigate{height:40px;position:relative; font-family: 'carme', sans-serif;}
+div#navigate{height:40px;position:relative; font-family: 'Josefin Sans', sans-serif; font-weight: 600;}
 //div#nav{background:url(nav.png) no-repeat;width:880px;min-width:880px;height:44px;padding:1px 7px 3px;position:absolute;}
 ul#links{height:40px;left:7px;float:left;overflow:visible;position:absolute;}
 ul#links li{font-size:18px;height:44px;float:left;overflow:visible;}
@@ -96,7 +96,8 @@ div#paginate span.current{font-weight:bold;padding:0 3px;}
 div#paginate div a,div#paginate div span.current{padding:0 6px 0 0;}
 div#images{width:480px;padding:0px 0 10px 0px;float:left;}
 /div#images div#image img{float:center;}
-div#image {text-align: center; background-image: url(stripes.png?v1); padding-top: 10px;}
+div#image {text-align: center; padding-top: 10px;}
+div#image img {border: solid black 5px;}
 div#images div#thumbs p{font-size:13px;text-align:center;padding-top:20px;display:none;}
 div#images div#thumbs p.active{display:block;}
 div#details{float: right;}
@@ -190,7 +191,7 @@ div#footer p span{display:none;}
 .social-links{margin-bottom: 5px;}
 div#product div#bg{padding: 0px;}
 div#product div#desc{background-color: white; padding: 0 10px 10px 10px;}
-div#product div#image{background-color: white; width: 480px; }
+div#product div#image{width: 480px; }
 div#product div#thumbs{margin-top: 5px; background-color: white; padding: 10px; margin-left: 5px; width: 460px;}
 div#product div#details{width: 385px; margin-right: 5px;}
 div#product div.social-links{padding: 10px; margin: 5px 0 5px 0; background-color: white;}
@@ -199,7 +200,7 @@ div#product div#buy{background-color: #fff; padding: 20px; margin: 5px 0 5px 0;}
 div#product div#for{background-color: #fff; margin: 5px 0 5px 0; padding-left: 10px;}
 div#product div#features{background-color: #fff; margin: 5px 0 5px 0; padding: 10px;}
 div#product div#features ul {}
-div#product div#features li {min-height: 28px; padding-left: 40px; background-image: url('disc.png?v1'); background-repeat: no-repeat; margin-bottom: 10px; background-position: 0 3px;}
+div#product div#features li {min-height: 28px; padding-left: 40px; background-image: url('disc.png?v6'); background-repeat: no-repeat; margin-bottom: 10px; background-position: 0 3px;}
 div#product div#delivery{background-color: #fff; margin: 5px 0 5px 0; padding: 10px 20px 10px 10px;}
 div#product div#delivery p{margin-bottom: 10px;}
 
@@ -213,7 +214,7 @@ div#product div#options{padding: 0px;}
 div#product div#also-like{background-color: #fff; margin: 5px -5px 5px 5px; padding: 0px 20px 10px 10px;}
 div#product div.also-like-image-container{float: left; margin: 10px 10px 10px 0;}
 
-div#summary{background-color: #eee;}
+div#summary{background-color: #000; background-image: url(product-wallpaper.jpg?v1);}
 
 
 div#page h1{font-family: 'Palatino', 'Palatino Linotype', 'Georgia';
@@ -230,21 +231,24 @@ div#page  .p160{width:140px; float: left; padding-right: 20px;}
 div#page  .p240{width:220px; float: left; padding-right: 20px;}
 div#page  .p320{width:300px; float: left; padding-right: 20px;}
 div#page  .p400{width:380px; float: left; padding-right: 20px;}
+
 div#page  .p480, div#article .p480{width:460px; float: left; padding-right: 20px;}
+
 div#page  .p560{width:540px; float: left; padding-right: 20px;}
 div#page  .p640{width:620px; float: left; padding-right: 20px;}
 div#page  .end{clear: right;}
-div#page  h3 {clear: both; color: #436168; padding-top: 0px; margin-top: 0px;}
-div#page  h2 {clear: both; padding: 0px 0 0 5px; 
-			background-color: #7d8c21;
-			font-family: 'carme', 'sans-serif';
-			color: white;
+div#page  h3 {clear: both; padding-top: 0px; margin-top: 0px; font-family: 'Josefin Sans', 'sans-serif';}
+div#page  h2 {
+	        clear: both; padding: 0px 0 0 5px; 
+			font-family: 'Josefin Sans', 'sans-serif';
+			font-weight: 600;
+			font-size: 2.2em;
 			padding: 10px 0px 0px 4px;
 			font-size: 1.4em;
 }
 			
 div#page h2 a{
-	        font-family: 'carme', 'sans-serif';
+	        font-family: 'Josefin Sans', 'sans-serif';
 			color:#fff;
 			font-weight: normal;
 }
@@ -252,10 +256,10 @@ div#page h2 a{
 			
 div#page  h3 span{font-size: 2em; color:orange}
 
-div#collection  h1{font-family: 'Carme', sans-serif;
-			font-family: 'Carme', sans-serif;
-			font-size: 1.8em;
-			color: #7d8c21;
+div#collection  h1{
+	        font-family: 'Dancing Script', cursive;
+			font-size: 2.2em;
+			color: #FC0361;
 			font-weight: normal;
 			padding: 0 0 10px 0;
 }
@@ -271,12 +275,11 @@ div#collection  h2 {clear: both;
 div#collection  h3 span{font-size: 2em; color:orange}
 
 .collection-product-banner{
-	margin-top: 20px;
-	margin-left: 50px;
-	width: 150px;
 	font-size: 1.4em;
-	font-family: rokkitt;
-	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	color: #ffffff;
+	background-color: #FC0361;
+	padding-left: 10px;
 	/*background-image: url(stripes.png?v1);
 	background-color: #444;
 	font-family: 'carme', 'sans-serif';
@@ -287,9 +290,9 @@ div#collection  h3 span{font-size: 2em; color:orange}
 .photo_comment{background-color: #436168; color: white; text-align: center; padding: 2px;}
 
  h1{
-	font-family: 'Carme', sans-serif;
-	font-size: 1.8em;
-	color: #7d8c21;
+	font-family: 'Dancing Script', cursive;
+	font-size: 2.2em;
+	color: #FC0361;
 	font-weight: normal;
 	padding: 0 0 10px 0;
 	margin-top: 15px;
@@ -326,7 +329,8 @@ div#collection  h3 span{font-size: 2em; color:orange}
 	width: 140px; 
 	padding: 40px;
 	display: none;
-	font-family: arial;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.2em;
 }
 
 #splasher .white{
@@ -410,7 +414,9 @@ div#collection-description{
 	padding: 10px 0px 10px 0px;
 	font-size: 1.2em;
 	margin: 0px 5px 5px 5px;
-	font-family: 'Carme', 'sans-serif';
+	font-family: 'Josefin Sans', 'sans-serif';
+	font-size: 1.4em;
+	font-weight: 600;
 }
 
 div#collection-description p{
@@ -424,15 +430,14 @@ ul#products{
 
 ul#products li{
 	margin: 0px 0px 15px 5px;
-	background-image: url(white-box.png?v6);
+	background-color: #000;
+	background-image: url(collection-wallpaper.jpg?v3);
 	height: 338px;
 }
 
-ul#products li img{
-	border-left: 1px solid #888;
-	border-bottom: 1px solid #000;
-	border-right: 1px solid #000;
-	border-top: 1px solid #888;
+ul#products .collection-image{
+	border: 5px solid black;
+	margin-top: 15px;
 }
 
 div#collection-bg{
@@ -459,11 +464,13 @@ ul.anchor-list{
 }
 
 #page ul.anchor-list li{
-	background-color: #FC0361;
+	background-color: #F5979b;
 	float: left;
 	clear: left;
 	list-style-type: none;
-	font-size: 1.2em;
+	font-size: 1.3em;
+	font-family: 'Josefin Sans', 'sans-serif';
+	font-weight: 600;
 	padding: 0 20px 0 20px;
 	margin: 0 0 10px 0;
 }
@@ -473,7 +480,7 @@ ul.anchor-list{
 }
 
 #page ul.anchor-list a{
-	color: white;
+	color: black;
 }
 
 #page div.anchor-container-image{
@@ -562,21 +569,31 @@ ul.bullet-list{
 	width: 245px;
 }
 
-.gift-tag-img{
-	position: relative;
-	left: -159px;
-	top: 15px;
-}
-
 .gift-tag{
-	background-color: #b00031;
+	font-size: 1em;
+	font-family: 'Dancing Script', cursive;
+	color: #ffffff;
+	background-color: #FC0361;
 }
 
 .product-h1-text{
 
 }
 
+.new-product{
+	position: relative;
+	top: -250px;
+	left: 205px;
+	border: none;
+}
 
+div#xmas-delivery{
+	background-image: url(xmas-package.png);
+	background-repeat: no-repeat;
+	padding: 20px 20px 50px 120px;
+	background-color: white;
+	
+}
 
 
 
