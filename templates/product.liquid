@@ -1,16 +1,23 @@
 <!-- start social -->
 <div class="social-links">
 	<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
+
+	{% if product.metafields.product.name == 'archie' %}
+	<span>
+		<a href="http://www.facebook.com/pages/Archie-the-Whippet/228735777206964">
+			<img src="{{ 'follow.png' | asset_url }}"/>
+		</a>
+	</span>
+	{% endif %}
+
 </div>
-{% if product.metafields.product.name == 'archie' %}
-<div style="text-align: right;"><a href="http://www.facebook.com/pages/Archie-the-Whippet/228735777206964"><img src="{{ 'follow.png' | asset_url }}"/></a></div>
-{% endif %}
+
 <!-- end social -->
-
-   <div class="gift-tag">
-	<h1 style="margin-top: 5px;">{{ product.title | escape }}</h1>    
-   </div>
-
+<div class="opaque-container" style="height: 40px">   
+   <div class="opaque"></div>
+   <h1 class="over-opaque">{{ product.title | escape }}</h1>
+</div>	
+	
 <!-- START CONTENT -->
 <div id="summary" class="clear">
 	
@@ -49,7 +56,7 @@
 	<div id="details">
 		
 		<!-- buy buttons -->
-		<div id="options">
+		<div id="options" class="rounded10">
 			<form method="post" action="/cart/add" style="border-top: none;">{% if product.variants.size > 1 %}
 				<!-- START VARIANTS -->
 				<div id="variants">
@@ -63,7 +70,7 @@
 				<!-- END VARIANTS -->{% else %}{% for variant in product.variants %}
 				<input type="hidden" name="id" value="{{ variant.id }}" />{% endfor %}{% endif %}
 				<!-- START BUY -->
-				<div id="buy" class="clear">
+				<div id="buy" >
 				    {% if product.available %}
                          <p class="in-stock">{{ product.variants.first.inventory_quantity }} IN STOCK NOW</p>
 					     <h4 id="price">
@@ -90,11 +97,11 @@
 		
 
 		
-		<div id="features">
+		<div id="features" class="rounded10">
 			{% include 'features' %}
 		</div>
 		
-		<div id="delivery">
+		<div id="delivery" class="rounded10">
 			<p><span style="font-weight: bold; background-color: #FC0361; color: white; padding: 2px;">Free Delivery</span> anywhere in the UK.</p>
 			<p><span style="font-weight: bold;  background-color: #FC0361; color: white; padding: 2px;">We also deliver worldwide</span> but have to charge an extra £10 for that, sorry.</p> 
 			{% if product.metafields.product.features contains 'LED' %}
@@ -105,7 +112,7 @@
 
 		
 		<!-- START DESC -->
-		<div id="desc">
+		<div id="desc" class="rounded10">
 			<h2>More about {{ product.metafields.product.name | capitalize }}:</h2>
 			{{ product.description }}
 		</div>

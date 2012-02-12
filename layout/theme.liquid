@@ -33,7 +33,7 @@
 		<div id="header" class="clear">
 			<!-- START LOGO -->{% if settings.logo == "enabled" %}
 			<div id="logo">
-				<a href="/"><img src="{{ "logopink.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
+				<a href="/"><img src="{{ "light-art-logo.png" | asset_url }}" alt="{{ shop.name | escape }}" /></a>
 			</div>{% else %}
 			<h2><a href="/">{{ shop.name | escape }}</a></h2>{% endif %}
 			<!-- END LOGO -->{% if settings.phone.size > 0 or settings.email.size > 0 %}
@@ -80,7 +80,7 @@
 			<div id="bg" class="clear">
 				
 				{% if (template == "page" and (page.handle != "tiger-appeal" and page.handle != "bespoke-table-lamp-design" and page.handle != "blogs")) or template == "blog" or template == "article" %}
-						<h1 class="title">{{ page.title | escape }}{{ blog.title | escape }}</h1>
+						<h1>{{ page.title | escape }}{{ blog.title | escape }}</h1>
 						<!-- START MAIN -->
 						<div id="main">
 							{{ content_for_layout }}

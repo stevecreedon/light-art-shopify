@@ -12,14 +12,14 @@
 	<ul id="products" class="clear">{% for product in collection.products %}
 		<!-- START PRODUCT {{ forloop.index }} -->
 		<li{% cycle ' class="rounded3"', ' class="rounded3"',' class="rounded3 end"' %}>
-		  <a href="{{ product.url }}" style="color: #666; font-size: 1.4em;">
-		    <div class="collection-product-banner">
-				{{ product.metafields.product.name }}
-		    </div>
-		</a>	
-		 
 			<!-- START IMAGE -->
-			<div class="image">
+			<div class="image opaque-container" >
+				<a href="{{ product.url }}" style="height: 40px">
+						    <div class="opaque"></div>
+						    <h2 class="over-opaque">
+								{{ product.metafields.product.name }}
+						    </h2>
+				</a>
 				<div class="align">
 					<div>
 						<a href="{{ product.url }}">
@@ -29,11 +29,7 @@
 				</div>
 			</div>
 			<!-- END IMAGE -->
-			{% if product.metafields.product.name == 'archie' or product.metafields.product.name == 'blake' %}
-			<a href="{{ product.url }}">
-		    	<img class="new-product" src="{{ 'new.png' | asset_url }}" />
-		    </a>
-		    {% endif %}				
+		   			
 		</li>
 		<!-- END PRODUCT {{ forloop.index }} -->{% endfor %}
 	</ul>{% else %}

@@ -1,35 +1,36 @@
 /* Designed and hand-coded by http://www.pixellent.com. Copyright (c) Pixellent, LLC. All rights reserved. */
-body{color:#2c2f2f;font-family: 'Josefin Sans', arial, sans-serif;text-align:center;background-color:#fff;}
-div#container{text-align:left;width:894px;min-width:894px;margin:0 auto;}
+body{color:#2c2f2f;font-family: arial, sans-serif;text-align:center;background-color:#bcf9ff; background-image: url(background.png); background-repeat: repeat-y;}
+div#container{text-align:left;width:1080px;min-width:1080px;margin:0 auto;}
 div#shadow{background:url(content.png) no-repeat;width:894px;height:307px;}
-div.content{padding:5px 7px 0;}
-div#bg{background-color:#fff;min-height:250px;height:auto!important;height:270px;padding:0 0 25px;}
-div#roundup{font-size:1px;text-indent:-99999px;background:url(roundup.png) no-repeat;height:10px;}
-div#main{width:640px;padding-bottom:15px;float:left;}
+div.content{padding:0;}
+div#bg{min-height:250px;height:auto!important;height:270px;padding:0 0 25px;}
+div#main{width:800px;padding-bottom:15px;float:left;}
 div#sidebar{width:220px;float:right;padding-left:20px;}
 .clear{display:inline-block;}
 .clear{display:block;}
 .clear:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-a{color:#a2d400;text-decoration:none;}
-div#footer p a,div#header h2 a,ul#links li a,div#gocart a,div.entry h2.title a,ul#results li p a{color:#2c2f2f;}
+a{color:#fff; text-decoration:none;}
+div#footer p a, div#header h2 a,ul#links li a,div#gocart a,div.entry h2.title a,ul#results li p a{color:#2c2f2f;}
 a:hover,ul#results li p a:hover{text-decoration:underline;}
 div#header h2 a:hover,div.entry h2.title a:hover{color:#a2d400;text-decoration:none;}
-ul#links li a:hover,div#gocart a:hover{text-decoration:none;color: #888;}
+ul#links li a:hover,div#gocart a:hover{text-decoration:none;color: #333;}
 div#header{padding:10px 7px 5px; position: relative;}
 div#header h2{font-size:30px;padding-top:4px;float:left;}
-div#logo,div#logo img{float:left; font-family: 'Josefin Sans', sans-serif;position: relative; left: -27px;}
+div#logo,div#logo img{float:left; position: relative; left: -5px;}
 div#hello{float:right; margin-top: 10px;}
-div#hello p{font-size:18px;text-align:right; color: #aa9184 !important;}
+div#hello p{font-size:18px;text-align:right; color: #6a6868 !important;}
 div#hello p a{}
 div#hello p strong{padding-right:3px;}
-div#navigate{height:40px;position:relative; font-family: 'Josefin Sans', sans-serif; font-weight: 600;}
+div#navigate{height:40px;position:relative; color: white; background-color: #ff0066; padding: 0 0 10px 10px;}
+div#navigate ul a{ color: #fff;}
+div#navigate ul a:hover;{ color: #333;}
 //div#nav{background:url(nav.png) no-repeat;width:880px;min-width:880px;height:44px;padding:1px 7px 3px;position:absolute;}
 ul#links{height:40px;left:7px;float:left;overflow:visible;position:absolute;}
 ul#links li{font-size:18px;height:44px;float:left;overflow:visible;}
 
-ul#links li a{text-align:center;padding:13px 20px 17px 0px;display:block;float:left; font-size: 1.2em;}
+ul#links li a{text-align:center;padding:13px 20px 13px 0px;display:block;float:left; font-size: 1.2em;}
 
-div#gocart{font-size:14px;width:125px;height:44px;right:7px;float:right;overflow:visible;position:absolute;border-left: 5px white solid;padding-bottom:20px;}
+div#gocart{font-size:14px;width:125px;height:44px;right:7px;float:right;overflow:visible;position:absolute;padding-bottom:20px;}
 div#gocart a{font-weight:bold;text-align:right;width:75px;padding:13px 49px 17px 1px;display:block;float:left;}
 div#gocart a:hover{background-position:-762px -49px;}
 div#gocart a.active,div#gocart a.active:hover{background-position:-762px -97px;}
@@ -70,9 +71,9 @@ div#collections-listing li{font-size:16px;padding-top:5px;}
 div#collections-listing li small{font-size:12px;padding-left:3px;}
 ul#products{}
 ul#results{padding:30px 0 15px;}
-ul#products li,ul#results li{width:286.66px;float:left; background-color: white;}
+ul#products li,ul#results li{width:320px;float:left; background-color: white;}
 ul#products li.end,ul#results li.end{border-right:none;}
-ul#products li div.image,ul#results li div.image,ul#results li div.desc{padding:10px 14px;}
+ul#results li div.image,ul#results li div.desc{padding:10px 14px;}
 ul#products li div.image div.align,ul#results li div.image div.align,ul#results li div.desc div.bg{width:240px;height:240px;position:relative;}
 ul#results li div.desc div.bg{overflow:visible;}
 ul#products li div.image div.align div,ul#results li div.image div.align div{font-size:217px;text-align:center;vertical-align:middle;width:240px;height:240px;overflow:visible;display:table-cell;}
@@ -142,7 +143,7 @@ div#total div#checkout input{float:right;margin-left:10px;}
 div.entry{padding:10px 0 25px;border-bottom:1px solid #e4e4e4;}
 div#article div.entry,div#blog div#main div.start{padding-top:0;}
 div#blog div#main div.end{padding-bottom:0;border-bottom:none;}
-div#page h1,div#page h2,div#page h3,div#page h4,div#page h5,div#page h6,div.entry h1,div.entry h2,div.entry h3,div.entry h4,div.entry h5,div.entry h6,div.comment h1,div.comment h2,div.comment h3,div.comment h4,div.comment h5,div.comment h6{font-size:20px;line-height:1.42em;padding:15px 0;}
+div#page h2,div#page h3,div#page h4,div#page h5,div#page h6,div.entry h1,div.entry h2,div.entry h3,div.entry h4,div.entry h5,div.entry h6,div.comment h1,div.comment h2,div.comment h3,div.comment h4,div.comment h5,div.comment h6{font-size:20px;line-height:1.42em;padding:15px 0;}
 div.entry h2.title{padding-bottom:0;}
 div.entry h2.title a{line-height:1.42em;}
 div.entry h5.posted{color:#666;font-size:13px;font-weight:normal;padding:3px 0 5px;}
@@ -190,39 +191,26 @@ div#footer p span{display:none;}
 
 .social-links{margin-bottom: 5px;}
 div#product div#bg{padding: 0px;}
-div#product div#desc{background-color: white; padding: 0 10px 10px 10px;}
 div#product div#image{width: 480px; }
-div#product div#thumbs{margin-top: 5px; background-color: white; padding: 10px; margin-left: 5px; width: 460px;}
-div#product div#details{width: 385px; margin-right: 5px;}
-div#product div.social-links{padding: 10px; margin: 5px 0 5px 0; background-color: white;}
+div#product div#thumbs{margin-top: 5px; padding: 10px; margin-left: 5px; width: 460px;}
+div#product div#details{width: 570px; margin-right: 5px;}
+div#product div.social-links{padding: 10px; margin: 5px 0 5px 0;}
 div#product div#money-back-container{background-color: #fff; padding: 20px; margin: 5px 0 0 5px; width: 440px;}
-div#product div#buy{background-color: #fff; padding: 20px; margin: 5px 0 5px 0;}
 div#product div#for{background-color: #fff; margin: 5px 0 5px 0; padding-left: 10px;}
-div#product div#features{background-color: #fff; margin: 5px 0 5px 0; padding: 10px;}
 div#product div#features ul {}
-div#product div#features li {min-height: 28px; padding-left: 40px; background-image: url('disc.png?v6'); background-repeat: no-repeat; margin-bottom: 10px; background-position: 0 3px;}
-div#product div#delivery{background-color: #fff; margin: 5px 0 5px 0; padding: 10px 20px 10px 10px;}
+div#product div#features li {min-height: 28px; background-repeat: no-repeat; margin-bottom: 10px; background-position: 0 3px;}
 div#product div#delivery p{margin-bottom: 10px;}
 
 div#product div#for h2 {color: #999; background-color: white; padding:5px 0 0 0px;}
-div#product div#desc h2 {color: #999; background-color: white; padding:5px 0 0 0px; margin-bottom: 10px;}
-div#product div#also-like h2{color: #999; background-color: white; padding:5px 0 0 0px;}
+div#product div#also-like h2{color: #333; padding:5px 0 0 0px;}
 
 div#product form{padding: 0px;}
 div#product div#options{padding: 0px;}
 
-div#product div#also-like{background-color: #fff; margin: 5px -5px 5px 5px; padding: 0px 20px 10px 10px;}
+div#product div#also-like{margin: 5px -5px 5px 5px; padding: 0px 20px 10px 10px;}
 div#product div.also-like-image-container{float: left; margin: 10px 10px 10px 0;}
 
-div#summary{background-color: #000; background-image: url(product-wallpaper.jpg?v1);}
-
-
-div#page h1{font-family: 'Palatino', 'Palatino Linotype', 'Georgia';
-			font-size: 1.8em;
-			color: #436168;
-			font-weight: normal;
-			padding: 0;
-}
+div#summary{background-color: #8ab0b0;}
 
 div#page  .full_width{clear: both;}
 div#page  .start{clear: left;}
@@ -237,18 +225,18 @@ div#page  .p480, div#article .p480{width:460px; float: left; padding-right: 20px
 div#page  .p560{width:540px; float: left; padding-right: 20px;}
 div#page  .p640{width:620px; float: left; padding-right: 20px;}
 div#page  .end{clear: right;}
-div#page  h3 {clear: both; padding-top: 0px; margin-top: 0px; font-family: 'Josefin Sans', 'sans-serif';}
+div#page  h3 {clear: both; padding-top: 0px; margin-top: 0px;}
 div#page  h2 {
 	        clear: both; padding: 0px 0 0 5px; 
-			font-family: 'Josefin Sans', 'sans-serif';
-			font-weight: 600;
-			font-size: 2.2em;
-			padding: 10px 0px 0px 4px;
 			font-size: 1.4em;
+			margin: 20px 0 10px 0;
+			padding: 5px 0px 5px 4px;
+			width: 620px;
+			font-size: 1.4em;
+			background-color: #607a7a;
 }
 			
 div#page h2 a{
-	        font-family: 'Josefin Sans', 'sans-serif';
 			color:#fff;
 			font-weight: normal;
 }
@@ -256,43 +244,21 @@ div#page h2 a{
 			
 div#page  h3 span{font-size: 2em; color:orange}
 
-div#collection  h1{
-	        font-family: 'Dancing Script', cursive;
-			font-size: 2.2em;
-			color: #FC0361;
-			font-weight: normal;
-			padding: 0 0 10px 0;
-}
-
 div#collection  h3 {clear: both; color: #436168; padding-top: 0px; margin-top: 0px; line-height: 10px;}
-div#collection  h2 {clear: both; 
-			padding: 0px 0 0 5px; 
-			border-bottom: 1px solid #ccc; 
-			margin:40px 0 10px 0; 
-			text-decoration: none;
-			/*border-left: 20px solid orange;*/
-			background-image: url('h2-bg.png');}
+
 div#collection  h3 span{font-size: 2em; color:orange}
 
 .collection-product-banner{
-	font-size: 1.4em;
-	font-family: 'Dancing Script', cursive;
 	color: #ffffff;
 	background-color: #FC0361;
 	padding-left: 10px;
-	/*background-image: url(stripes.png?v1);
-	background-color: #444;
-	font-family: 'carme', 'sans-serif';
-	padding: 4px 0px 0px 10px;*/
-	font-size: 1.4em;
 }
 
 .photo_comment{background-color: #436168; color: white; text-align: center; padding: 2px;}
 
  h1{
-	font-family: 'Dancing Script', cursive;
-	font-size: 2.2em;
-	color: #FC0361;
+	font-size: 1.8em;
+	color: #fff;
 	font-weight: normal;
 	padding: 0 0 10px 0;
 	margin-top: 15px;
@@ -329,7 +295,6 @@ div#collection  h3 span{font-size: 2em; color:orange}
 	width: 140px; 
 	padding: 40px;
 	display: none;
-	font-family: 'Josefin Sans', sans-serif;
 	font-size: 1.2em;
 }
 
@@ -411,12 +376,9 @@ div#comments{
 }
 
 div#collection-description{
-	padding: 10px 0px 10px 0px;
+	padding: 0px 0px 0px 0px;
 	font-size: 1.2em;
-	margin: 0px 5px 5px 5px;
-	font-family: 'Josefin Sans', 'sans-serif';
-	font-size: 1.4em;
-	font-weight: 600;
+	margin: 0px 0px 15px 0px;
 }
 
 div#collection-description p{
@@ -429,15 +391,14 @@ ul#products{
 }
 
 ul#products li{
-	margin: 0px 0px 15px 5px;
-	background-color: #000;
-	background-image: url(collection-wallpaper.jpg?v3);
+	margin: 0px 15px 15px 0px;
+	background-color: #8ab0b0;
 	height: 338px;
 }
 
 ul#products .collection-image{
 	border: 5px solid black;
-	margin-top: 15px;
+	margin-top: 60px;
 }
 
 div#collection-bg{
@@ -454,8 +415,19 @@ div#collection-bg{
 	border-radius:3px;
 }
 
+.rounded10{
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+
+#details div{
+	margin: 10px;
+	padding: 20px;
+	background-color:#d5edef;
+}
+
 ul.anchor-list{
-	width: 300px;
 	list-style-type: none;
 	padding-left: 0px;
 	margin: 0 0 0px 0px;
@@ -464,13 +436,11 @@ ul.anchor-list{
 }
 
 #page ul.anchor-list li{
-	background-color: #F5979b;
+	background-color: #FF0066;
 	float: left;
 	clear: left;
 	list-style-type: none;
-	font-size: 1.3em;
-	font-family: 'Josefin Sans', 'sans-serif';
-	font-weight: 600;
+	font-size: 1.4em;
 	padding: 0 20px 0 20px;
 	margin: 0 0 10px 0;
 }
@@ -479,9 +449,7 @@ ul.anchor-list{
 	margin: 10px 0 0px 0;
 }
 
-#page ul.anchor-list a{
-	color: black;
-}
+
 
 #page div.anchor-container-image{
 	width: 247px;
@@ -492,7 +460,6 @@ ul.anchor-list{
 }
 
 button.css3button {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 	padding: 5px 20px;
@@ -571,7 +538,6 @@ ul.bullet-list{
 
 .gift-tag{
 	font-size: 1em;
-	font-family: 'Dancing Script', cursive;
 	color: #ffffff;
 	background-color: #FC0361;
 }
@@ -595,7 +561,70 @@ div#xmas-delivery{
 	
 }
 
+.bordered{
+	border: 3px solid #78bbbd;
+}
 
+div#archies{
+	background-image: url(archies.png);
+	height: 472px;
+}
+
+.opaque-container{
+	position: relative;
+}
+
+h2.over-opaque, h1.over-opaque{
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	color: white;
+	font-size: 1.4em;
+	font-weight: normal;
+	height: 40px;
+	padding: 0;
+	margin: 0;
+}
+
+div.opaque{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: black;
+	opacity: 0.3;
+	height: 40px;
+	width: 100%;
+}
+
+ul#products li div.image div.align{
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.light-bubble{
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	background-color: #b2caca;
+	margin: 20px 120px 0 0;
+	padding: 20px;
+}
+
+div#page div.light-bubble h3{
+	color: white;
+	margin: 0;
+	padding: 0;
+	line-height: 1em;
+}
+
+div#sidebar h5 a {
+	color: #f06;
+}
+
+div#main p{
+	width: 620px;
+}
 
 
 
