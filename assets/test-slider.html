@@ -1,55 +1,60 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<style>
-	
-	#effect-container{
-		margin: 20px;
-	}
-	
-	.opaque-container{
-		position: relative;
-	}
-	
-	h2.over-opaque, h1.over-opaque{
-		position: absolute;
-		top: 5px;
-		left: 10px;
-		color: white;
-		font-size: 1.4em;
-		font-weight: normal;
-		height: 40px;
-		padding: 0;
-		margin: 0;
-	}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 1</title>
 
-	div.opaque{
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		background-color: black;
-		opacity: 0.3;
-		height: 40px;
-		width: 100%;
+<style>
+	.TB_Wrapper {
+		width: 800px;
+		height: 400px;	
+		background: #EEEEEE url(preloader.gif) center center no-repeat;		
 	}
-	
-	.hidden-effect-image{
-		display: none;
-	}
-		
-	</style>
-	<script type="text/javscript" src="jquery-1.3.1.js"></script>
-	<script>
-		
-	</script>
-</head>	
+</style>
+<link rel="stylesheet" href="style.css" />
+<script src="jquery-1.7.min.js"></script>
+<script src="jquery.easing.1.3.min.js"></script>
+<script src="trans-banner.min.js"></script>
+<script type="text/javascript">
+	jQuery(function($){
+		$('.TB_Wrapper').TransBanner();	
+	});	
+</script>
+
+</head>
 <body>
-	<div>Above</div>
-	<div id="effect-container" class='opaque-container'>
-		<img src="archie-the-whippet-1.jpg">
-		<img src="archie-the-whippet-2.jpg" class="hidden-effect-image">
-		<h2 class="over-opaque">Archie the Whippet</h2>
-		<div class="opaque"></div>
+
+<div class="TB_Wrapper">
+		
+	<div class="Slide">
+		<img src="archie-the-whippet-1.jpg" alt="img1" />
+		<div align="left">			
+			Translucent background for captions with cross browser compatibility. From IE6 and FF 3.0
+		</div>
 	</div>
-	<div>Beneath</div>	
+	
+	<div class="Slide">
+		<img src="archie-the-whippet-2.jpg" alt="img1" />
+		<div align="left">
+			<span style="font-weight:bold">Touch Support</span><br />Supports swipe navigation for Android and iOS devices. Adjustable drop and throw sensitivity.
+		</div>
+	</div>
+	
+	<div class="Slide">
+		<img src="images/image3.jpg" alt="img3" />
+		<div align="left">
+			<span style="font-weight:bold">Per Slide Settings</span><br />Possible to super-impose color layer over the translucent background to improve visibility.
+		</div>
+	</div>
+	
+	<div class="Slide">
+		<img src="images/image4.jpg" alt="img4" />
+		<div align="left">
+			4 Transition effects to choose: <span style="font-style:italic">Move, Fade, Slide In, Slide Out.</span> Touch swipe uses 2 of them.
+		</div>
+	</div>
+
+</div>
+
 </body>
 </html>

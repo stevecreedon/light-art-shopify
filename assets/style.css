@@ -1,0 +1,53 @@
+.TB_Wrapper {
+	position: relative;
+	overflow: hidden;
+}
+		
+.TB_Wrapper .Slide {
+	visibility:hidden;
+	background: #EEEEEE url(preloader.gif) center center no-repeat;
+}	
+
+.TB_Wrapper .icon {
+	background-image: url(icons.png);
+}
+
+.TB_Wrapper .timer_sprite {
+	background-image: url(timer-sprite.png);
+}
+	
+/* Global Description Style */	
+.TB_Wrapper .Slide div {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight:100;
+	color:#FFF;
+	font-size:16px;	
+}
+
+	
+/*Hyperlink Styles*/
+.TB_Wrapper a:link{		
+	color:#FFF;
+	text-decoration:none;
+}
+	
+.TB_Wrapper a:visited{		
+	color:#FFF;
+}
+	
+.TB_Wrapper a:hover{		
+	color:#FFF;
+	text-decoration:underline;
+}
+	
+.TB_Wrapper a:active{		
+	color:#FFF;
+}
+
+.TB_Wrapper .noSelect {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}

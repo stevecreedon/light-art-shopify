@@ -566,7 +566,8 @@ div#xmas-delivery{
 }
 
 div#archies{
-	background-image: url(archies.png);
+	background: #EEEEEE url(preloader.gif) center center no-repeat;	
+	width: 1072px;
 	height: 472px;
 }
 
@@ -618,12 +619,54 @@ div#page div.light-bubble h3{
 	line-height: 1em;
 }
 
-div#sidebar h5 a {
+div#sidebar h5 a, div#archies div.Slide div a {
 	color: #f06;
 }
 
 div#main p{
 	width: 620px;
+}
+
+.boxgrid{  
+    width: 520px;  
+    height: 591px;  
+    margin: 0px;  
+    float:left;  
+    background:#161613;  
+    border: solid 2px #8399AF;  
+    overflow: hidden;  
+    position: relative;  
+}  
+
+.boxgrid img{  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    border: 0;  
+}  
+
+.boxcaption{  
+    float: left;  
+    position: absolute;  
+    background: #000;  
+    height: 250px;  
+    width: 420px;  
+    opacity: .8;
+    color: #fff;
+    padding: 50px;  
+    /* For IE 5-7 */  
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  
+    /* For IE 8 */  
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  
+}
+
+.captionfull .boxcaption {  
+    top: 591px;  
+    left: 0;  
+}  
+.caption .boxcaption {  
+    top: 591px;  
+    left: 0;  
 }
 
 
