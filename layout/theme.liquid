@@ -17,7 +17,7 @@
 
 {% if template != 'page' or page.handle != 'tiger-appeal' %}
 <body>
-	
+	<input type="hidden" id="template" value="{{template}}">
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
@@ -173,6 +173,7 @@
 
 {% if template == 'page' and page.handle == 'tiger-appeal' %}
     <body>
+	
 	{{ content_for_layout }}
 	<div id="badge-pop-up">
 		<div id="badge-content">

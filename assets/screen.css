@@ -71,8 +71,8 @@ div#collections-listing li{font-size:16px;padding-top:5px;}
 div#collections-listing li small{font-size:12px;padding-left:3px;}
 ul#products{}
 ul#results{padding:30px 0 15px;}
-ul#products li,ul#results li{width:320px;float:left; background-color: white;}
-ul#products li.end,ul#results li.end{border-right:none;}
+ul#products li,ul#results li{width:358.66px;float:left; background-color: white;}
+ul#products li.end,ul#results li.end{border-right:none; width: 325px;}
 ul#results li div.image,ul#results li div.desc{padding:10px 14px;}
 ul#products li div.image div.align,ul#results li div.image div.align,ul#results li div.desc div.bg{width:240px;height:240px;position:relative;}
 ul#results li div.desc div.bg{overflow:visible;}
@@ -393,7 +393,13 @@ ul#products{
 ul#products li{
 	margin: 0px 15px 15px 0px;
 	background-color: #8ab0b0;
-	height: 338px;
+	height: 338.66px;
+}
+
+ul#products li.end{
+	margin: 0px 0px 15px 0px;
+	background-color: #8ab0b0;
+	height: 338.66px;
 }
 
 ul#products .collection-image{
@@ -566,7 +572,7 @@ div#xmas-delivery{
 }
 
 div#archies{
-	background: #EEEEEE url(preloader.gif) center center no-repeat;	
+	background: #d5edef url(preloader.gif) center center no-repeat;	
 	width: 1072px;
 	height: 472px;
 }
@@ -669,6 +675,17 @@ div#main p{
     left: 0;  
 }
 
+div#page div.width-60 h2, div#page div.width-60 p{
+	width: 100%;
+}
 
+div#overview ul{
+	background-color: #d5edef;
+	border: 1px solid: #c4dcde;
+}
+
+div#overview a{
+	color: #f06;
+}
 
  
