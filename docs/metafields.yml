@@ -5,6 +5,7 @@ onion:
         features: NA
         for: dads, cool
         height: 12
+        animal: dog
 
 blake:
     product:
@@ -13,6 +14,7 @@ blake:
         features: LED
         for: kids
         height: 12
+        animal: tiger
 
 archie:
     product:
@@ -21,6 +23,7 @@ archie:
         features: LED
         for: dads, cool
         height: 15
+        animal: dog
 
 diego:
     product:
@@ -29,6 +32,7 @@ diego:
         features: NA
         for: kids, dads, cool
         height: 12
+        animal: dog
         
 poppy:
     product:
@@ -37,6 +41,7 @@ poppy:
         features: NA
         for: kids, cool
         height: 11
+        animal: rabbit
         
 pauli:
     product:
@@ -45,3 +50,4 @@ pauli:
         features: NA
         for: kids
         height: 8
+        animal: elephant

@@ -1,7 +1,8 @@
 <!-- start social -->
 <div class="social-links">
 	<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
-
+    <!-- Place this tag where you want the +1 button to render -->
+	<g:plusone></g:plusone>
 	{% if product.metafields.product.name == 'archie' %}
 	<span>
 		<a href="http://www.facebook.com/pages/Archie-the-Whippet/228735777206964">
@@ -9,6 +10,8 @@
 		</a>
 	</span>
 	{% endif %}
+	
+
 
 </div>
 
@@ -46,8 +49,21 @@
                            {% endif %}
 		</div>
 		
+		<div id="tags">
+			<a href="/collections/heico-lamps">
+				heico lamps
+			</a>&nbsp;
+	        <a href="/collections/animal-lamps">
+				animal lamps
+			</a>&nbsp;
+			<a href="/collections/{{product.metafields.product.animal}}-lamps">
+				{{product.metafields.product.animal}}-lamps
+			</a>
+		</div>
+		
 		{% include 'also_like' %}
         
+
 		<!-- END THUMBS -->
 	</div>
 	<!-- END IMAGES -->
@@ -107,18 +123,30 @@
 		</div>
 		<!-- END buy buttons -->
 		
-
-		
+		{% if product.handle != 'replacement-bulb-and-transformer-for-heico-skk-lamps-onion-and-other-lamps' %}
 		<div id="features" class="rounded10">
 			{% include 'features' %}
 		</div>
+		{% endif %}
+			
+		{% if product.metafields.product.name == 'archie' or product.metafields.product.name == 'blake' %}
+		<div id="in-the-shops" class="rounded10">
+			<h2>Can I see {{ product.metafields.product.name | capitalize }} in the shops ?</h2>
+			<p>We are selling {{ product.metafields.product.name | capitalize }} through a <a href="/pages/shops-selling-archie-and-blake">select number of shops</a> near us in North East London.</p>
+			<p>Feel free to <a href="http://lightart.wufoo.com/forms/talk-to-us-at-light-art/">contact us</a> if you'd like to see him in a shop near you.</p>
+		</div>
+		{% endif %}
 		
 		<div id="delivery" class="rounded10">
-			<p><span style="font-weight: bold; background-color: #FC0361; color: white; padding: 2px;">Free Delivery</span> anywhere in the UK.</p>
-			<p><span style="font-weight: bold;  background-color: #FC0361; color: white; padding: 2px;">We also deliver worldwide</span> but have to charge an extra £10 for that, sorry.</p> 
-			{% if product.metafields.product.features contains 'LED' %}
-			<p><span style="font-weight: bold;  background-color: #FC0361; color: white; padding: 2px;">Lifetime Guarantee</span> on electrical components.</p> 
-			{% endif %}
+			<h2>International Customers:</h2>
+			{{ 'flag_usa.png' | asset_url | img_tag: 'we deliver to the usa' }}&nbsp;
+			{{ 'flag_canada.png' | asset_url | img_tag: 'we deliver to canada' }}&nbsp;
+			{{ 'flag_eu.png' | asset_url | img_tag: 'we deliver to europe' }}&nbsp;
+			{{ 'flag_australia.png' | asset_url | img_tag: 'we deliver to australia' }}&nbsp;
+			{{ 'flag_new_zealand.png' | asset_url | img_tag: 'we deliver to new zealand' }}&nbsp;
+			{{ 'flag_brazil.png' | asset_url | img_tag: 'we deliver to brazil' }}&nbsp;
+			<p>Our lamps will work with all international mains power supplies.{% if product.metafields.product.features contains 'LED' %} For customers in the USA we provide a US standard plug.{% endif %} For customers in other countries we provide an adaptor suitable for your electrical system. Feel free to <a href="http://lightart.wufoo.com/forms/talk-to-us-at-light-art/">contact us</a> if you have any questions.</p> 
+			<p>Unfortunately we have to charge an extra £10 for international delivery. Sorry.</p>
 		</div>	
 		
 
@@ -135,3 +163,17 @@
 	<!-- END RIGHT COL-->
 </div>
 <!-- END CONTENT -->
+<div style="margin-top: 10px">
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone></g:plusone>
+</div>
+<!-- Place this render call where appropriate -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'en-GB'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

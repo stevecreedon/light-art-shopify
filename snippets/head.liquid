@@ -2,8 +2,8 @@
    <script type="text/javascript">stLight.options({publisher:'e820f19b-d15d-4aee-98b4-b092c90f367b'});</script>
        
    {% if template == "index" %}
-      <title>Unusual Lamps &amp; Lights | Fun Table Lamps by Light Art</title>
-      <meta name="description" content="Light Art designs &amp; crafts fun, colourful retro lamps and table lamps" />
+      <title>Unusual Lamps &amp; Lights | Contemporary Animal Table Lamps by Light Art</title>
+      <meta name="description" content="Designed in Dalston. Hand produced lamps by award winning Artist Myra Heller from only £65" />
    {% endif %}
   
    {% if template == "collection" %}
@@ -50,4 +50,12 @@
 	{{ "jquery.easing.1.3.min.js" | asset_url | script_tag }}
 	{{ "trans-banner.min.js" | asset_url | script_tag }}
 	{{ "application.js" | asset_url | script_tag }}
+
+	{% if template == 'page' && page.handle == 'shops-selling-archie-and-blake' %}
+		{{ "google-map-shops.js" | asset_url | script_tag }}	
+	{% endif %}
+	
+	<!-- Add the following three tags inside head -->
+	<meta itemprop="name" content="Title of your content">
+	<meta itemprop="description" content="This would be a description of the content your users are sharing">
 	   	

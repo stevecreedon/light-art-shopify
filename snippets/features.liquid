@@ -5,7 +5,7 @@
     {% assign he = 'she' %}
 	{% assign him = 'her' %}
 {% endif %}
-
+<h2>About {{ product.metafields.product.name | capitalize }}</h2>
 <ul>
 
 <li>We make {{ him }} in limited numbers so you won't find {{ him }} in every high street.</li>
@@ -15,8 +15,8 @@
 <li>{{ product.metafields.product.name | capitalize }} is made from tough polypropylene for that genuine 'pop art' look.</li>
 
 {% if product.metafields.product.features contains 'LED' %}
-<li>{{ he | capitalize }}'s lit by a 10V, 3W (yes really!) super low energy LED bulbs that last a lifetime and comes with a 240v wall plug transformer.</li>
+<li>{{ he | capitalize }}'s lit by a 10V, 3W (yes really!) super low energy LED bulbs that last a lifetime and comes with a mains wall plug transformer.</li>
 {% endif %}
 <li>{{ he | capitalize }} is approximately {{ product.metafields.product.height }} inches high</li>
-
+<li><strong>Free Delivery anywhere in the UK!</strong></li>
 </ul>
