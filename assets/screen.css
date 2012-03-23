@@ -110,7 +110,6 @@ div#options label{font-size:13px;display:block;}
 div#options select{margin:4px 0 15px;}
 div#buy h2,div#buy h6{font-size:36px;}
 div#buy h2 del{color:#999;font-size:18px;font-weight:normal;padding-left:3px;}
-div#buy input#add{margin-top:15px;}
 #lbOverlay{position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background-color:#000;cursor:pointer;}
 #lbCenter,#lbBottomContainer{position:absolute;z-index:9999;overflow:visible;background-color:#fff;}
 .lbLoading{background:#fff url(loading.gif) no-repeat center;}
@@ -151,7 +150,7 @@ div.entry h5.posted span{background:url(bubble.png) no-repeat 8px 2px;padding-le
 div#collection div#excerpt div#product h1,div#cart h1,div#missing h1,div#page div#blog h1.title,div#article h1.title,div#search h1{font-size:60px;line-height:1.42em;text-align:center;padding:20px 0 15px;}
 div#search h1{padding-bottom:5px;}
 div#page h1.title,div#blog h1.title,div#article h1.title{text-align:left;padding-bottom:0;}
-div#collection div#excerpt p,div#desc p,div#missing p,div#page p,div.entry p,div.comment p{font-size:13px;line-height:1.52em;padding-bottom:15px;}
+div#collection div#excerpt p,div#desc p,div#missing p,div#page p,div.entry p,div.comment p{padding-bottom:15px;}
 //div#page div#main p,div.entry p,div.comment p{padding:15px 0 0;}
 div#missing p{font-size:14px;text-align:center;}
 div#collection div#excerpt ul,div#collection div#excerpt ol,div#desc ul,div#desc ol{padding-bottom:10px;}
@@ -180,7 +179,7 @@ div#comments p#empty{font-size:13px;font-weight:normal;text-align:left;padding:0
 div#article div#main p#closed{font-size:13px;font-weight:bold;padding-top:25px;}
 div#overview{padding:30px 7px 0;}
 div#overview ul{background-color:#f2f2f2;min-width:840px;padding:27px 19px 15px;border:1px solid #dedbdb;-moz-border-radius:7px;-webkit-border-radius:7px;border-radius:7px;}
-div#overview li{width:250px;padding:0 15px;float:left;}
+div#overview li{width:300px;padding:0 15px;float:left;}
 div#overview h3{font-size:20px;line-height:1.32em;padding-bottom:15px;}
 div#overview h5,div#overview p{font-size:13px;line-height:1.52em;padding-bottom:15px;}
 div#footer{padding:40px 7px 100px;}
@@ -197,7 +196,7 @@ div#product div#details{width: 570px; margin-right: 5px;}
 div#product div.social-links{padding: 10px; margin: 5px 0 5px 0;}
 div#product div#money-back-container{background-color: #fff; padding: 20px; margin: 5px 0 0 5px; width: 440px;}
 div#product div#for{background-color: #fff; margin: 5px 0 5px 0; padding-left: 10px;}
-div#product div#features ul {}
+div#product div#features ul {margin-top: 20px;}
 div#product div#features li {min-height: 28px; background-repeat: no-repeat; margin-bottom: 10px; background-position: 0 3px;}
 div#product .rounded10 p{margin-bottom: 10px;}
 
@@ -427,7 +426,7 @@ div#collection-bg{
 	border-radius:10px;
 }
 
-#details div{
+#details div, div#article div.entry{
 	margin: 10px;
 	padding: 20px;
 	background-color:#d5edef;
@@ -725,6 +724,29 @@ div#tags a{
 	padding: 5px 10px 5px 10px;
 	margin-right: 5px;
 	opacity: 0.7;
+}
+
+div#summary .tagline{
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
+	font-size: 1.4em;
+	margin: 15px 0 15px 0;
+}
+
+div#details h2{
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-bottom: 10px;
+	font-size: 1.4em;
+}
+
+div#details h3{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 700;
+	font-size: 1em;
+}
+
+div#features span{
+
 }
 
  

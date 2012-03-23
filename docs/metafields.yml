@@ -6,6 +6,7 @@ onion:
         for: dads, cool
         height: 12
         animal: dog
+        tagline: bold, flamboyant and quirky
 
 blake:
     product:
@@ -15,6 +16,7 @@ blake:
         for: kids
         height: 12
         animal: tiger
+        tagline: an adorable cub raising money to protect tigers in the wild
 
 archie:
     product:
@@ -24,6 +26,7 @@ archie:
         for: dads, cool
         height: 15
         animal: dog
+        tagline: eclectic, light-filled style
 
 diego:
     product:
@@ -33,6 +36,7 @@ diego:
         for: kids, dads, cool
         height: 12
         animal: dog
+        tagline: surprisingly funky
         
 poppy:
     product:
@@ -42,6 +46,7 @@ poppy:
         for: kids, cool
         height: 11
         animal: rabbit
+        tagline: whimsical nostalgia, modern design
         
 pauli:
     product:
@@ -51,3 +56,4 @@ pauli:
         for: kids
         height: 8
         animal: elephant
+        tagline: adorable splash of minimalist colour

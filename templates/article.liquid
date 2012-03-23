@@ -1,5 +1,5 @@
 <!-- START ENTRY {{ forloop.index }} -->
-<div class="entry">
+<div class="entry rounded10">
 	<h2 class="title">{{ article.title | escape }}</h2>
 	<h5 class="posted">Posted by {{ article.author }} on {{ article.created_at | date: "%B %d, %Y" }} <span><a href="{{ article.url }}{% if blog.comments_enabled? %}#comments{% endif %}">{{ article.comments_count }} {{ article.comments_count | pluralize: "Comment", "Comments" }}</a></span></h5>
 	{{ article.content }}

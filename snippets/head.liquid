@@ -7,12 +7,12 @@
    {% endif %}
   
    {% if template == "collection" %}
-      <title>{{ page_title | escape }} | Table Lamps | Fun Lighting</title>
+      <title>{{ page_title | escape }} | Table Lamps | Unusual Lighting</title>
       <meta name="description" content="{{ page_title }} - {{ collection.description | strip_html | strip_newlines | truncate: 160 }}" />
    {% endif %}
 
    {% if template == "product" %}
-      <title>{{ page_title | escape }} | Table Lamp | Fun Lighting</title>
+      <title>{{ page_title | escape }} | {{ product.metafields.product.animal | capitalize }} Lamp | Animal Lamps</title>
       <meta name="description" content="{{ product.title | escape }} &mdash; Signed by award-winning artist Myra Heller &amp; hand-finished in Germany by Heico" />
       <!-- Facebook ignores this comment out
       <meta property="og:title" content="{{product.title}}" />
@@ -34,7 +34,7 @@
    <meta name="google-site-verification" content="05EfBIxCMTKgW288exgCy5GAVpnPYqUyMQq8Rzu9BvI" />
    <meta name="copyright" content="{{ shop.name | escape }}" />
 	
-
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
 	
 	{{ "reset.css" | asset_url | stylesheet_tag }}
 	{{ "screen.css" | asset_url | stylesheet_tag }}

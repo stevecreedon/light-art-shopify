@@ -23,7 +23,7 @@
 	
 <!-- START CONTENT -->
 <div id="summary" class="clear">
-	
+
 	<!-- START IMAGES -->
 	<div id="images">
 
@@ -34,7 +34,7 @@
                         <div style="clear:both; height: 2px;">&nbsp;</div>
 		</div>
 		<!-- END IMAGE -->
-               
+        <h2 class="tagline">&#8220;..{{product.metafields.product.tagline}}..&#8221;</h2>       
 		<!-- START THUMBS -->
 		<div id="thumbs">
      
@@ -80,34 +80,33 @@
 				<!-- START BUY -->
 				<div id="buy" >
 				    {% if product.available %}
-						 <table>
-							<td style="vertical-align: middle; padding-right: 20px; font-weight: bold">
+						
+						{% if product.variants.size == 1 %} 
+							<p class="in-stock">{{ product.variants.first.inventory_quantity }} IN STOCK NOW</p>
+						 {% else %}
+							<select name="id" id="id" style="font-size: 1.2em;">
+							{% for variant in product.variants %}
+								{% if variant.available %}
+									<option value="{{ variant.id }}">{{ variant.title | escape }} ({{ variant.inventory_quantity }} in stock)</option>
+								{% else %}
+									<option value="{{ variant.id }}" disabled="disabled">{{ variant.title | escape }} ({{ variant.price | money }}) - SOLD OUT</option>
+								{% endif %}
+							{% endfor %}
+							</select>
+						 {% endif %} 
+						
+						<table>
+							<td style="padding-right: 20px; font-weight: bold; font-size: 30px; font-family: 'Open Sans Condensed', sans-serif;">
 								     <span>{{ product.price | money }}</span>
 							         {% if product.compare_at_price_max > product.price %} 
 							           &nbsp;&nbsp;<del>{{ product.compare_at_price_max | money }} plus P&amp;P</del>
 							         {% endif %}
 						     </td>
 						     <td style="vertical-align: middle">
-							 	{% if product.variants.size == 1 %} 
-									<p class="in-stock">{{ product.variants.first.inventory_quantity }} IN STOCK NOW</p>
-								 {% else %}
-									<select name="id" id="id" style="font-size: 1.2em;">
-									{% for variant in product.variants %}
-										{% if variant.available %}
-											<option value="{{ variant.id }}">{{ variant.title | escape }} ({{ variant.inventory_quantity }} in stock)</option>
-										{% else %}
-											<option value="{{ variant.id }}" disabled="disabled">{{ variant.title | escape }} ({{ variant.price | money }}) - SOLD OUT</option>
-										{% endif %}
-
-									{% endfor %}
-									</select>
-								 {% endif %}
+							 	<input type="image" src="{{ 'add-me-to-your-basket.png?v1' | asset_url }}" alt="BUY THIS" id="add" />
 							 </td>
 						</table>
-						
-						<input type="image" src="{{ 'add-me-to-your-basket.png?v1' | asset_url }}" alt="BUY THIS" id="add" />
-				     
-					     
+						 
 					{% else %}
 						
 						{% if product.tags contains 'coming soon' %}
@@ -132,8 +131,9 @@
 		{% if product.metafields.product.name == 'archie' or product.metafields.product.name == 'blake' %}
 		<div id="in-the-shops" class="rounded10">
 			<h2>Can I see {{ product.metafields.product.name | capitalize }} in the shops ?</h2>
-			<p>We are selling {{ product.metafields.product.name | capitalize }} through a <a href="/pages/shops-selling-archie-and-blake">select number of shops</a> near us in North East London.</p>
+			<p><img src="{{'shop.jpg' | asset_url}}" style="float: right; border: 2px solid #437575;"/>We are selling {{ product.metafields.product.name | capitalize }} through a <a href="/pages/shops-selling-archie-and-blake">select number of shops</a> near us in North East London.</p>
 			<p>Feel free to <a href="http://lightart.wufoo.com/forms/talk-to-us-at-light-art/">contact us</a> if you'd like to see him in a shop near you.</p>
+		    <div style="clear: both; height: 0px; padding: 0; margin: 0;"></div>
 		</div>
 		{% endif %}
 		
@@ -148,17 +148,7 @@
 			<p>Our lamps will work with all international mains power supplies.{% if product.metafields.product.features contains 'LED' %} For customers in the USA we provide a US standard plug.{% endif %} For customers in other countries we provide an adaptor suitable for your electrical system. Feel free to <a href="http://lightart.wufoo.com/forms/talk-to-us-at-light-art/">contact us</a> if you have any questions.</p> 
 			<p>Unfortunately we have to charge an extra £10 for international delivery. Sorry.</p>
 		</div>	
-		
-
-		
-		<!-- START DESC -->
-		<div id="desc" class="rounded10">
-			<h2>More about {{ product.metafields.product.name | capitalize }}:</h2>
-			{{ product.description }}
-		</div>
-		<!-- END DESC -->
-       
-
+	
 	</div>
 	<!-- END RIGHT COL-->
 </div>

@@ -6,17 +6,19 @@
 	{% assign him = 'her' %}
 {% endif %}
 <h2>About {{ product.metafields.product.name | capitalize }}</h2>
+{{ product.description }}
 <ul>
 
-<li>We make {{ him }} in limited numbers so you won't find {{ him }} in every high street.</li>
+<li><h3 class="feature-title"><span>Surprising:</span></h3>We make {{ him }} in limited numbers so you won't find {{ him }} in every high street.</li>
 
-<li>{{ he | capitalize }}'s made using a truly unique, hand finished process so there's no seam & no ugly line when you switch {{ him }} on.</li>
-
-<li>{{ product.metafields.product.name | capitalize }} is made from tough polypropylene for that genuine 'pop art' look.</li>
+<li><h3 class="feature-title"><span>Perfect Finish:</span></h3>{{ he | capitalize }}'s made using a truly unique, hand finished process so there's no seam & no ugly line when you switch {{ him }} on.</li>
 
 {% if product.metafields.product.features contains 'LED' %}
-<li>{{ he | capitalize }}'s lit by a 10V, 3W (yes really!) super low energy LED bulbs that last a lifetime and comes with a mains wall plug transformer.</li>
+<li><h3 class="feature-title"><span>Energy Saving:</span></h3>{{ he | capitalize }}'s lit by a 10V, 3W (yes really!) super low energy LED bulbs that last a lifetime and comes with a mains wall plug transformer.</li>
 {% endif %}
+
+<li><h3 class="feature-title"><span>Tough:</span></h3>{{ product.metafields.product.name | capitalize }} is made from tough polypropylene for that genuine 'pop art' look.</li>
+
 <li>{{ he | capitalize }} is approximately {{ product.metafields.product.height }} inches high</li>
 <li><strong>Free Delivery anywhere in the UK!</strong></li>
 </ul>
