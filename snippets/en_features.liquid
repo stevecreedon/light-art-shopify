@@ -1,0 +1,30 @@
+{% if product.metafields.product.gender == 'male' %}
+	{% assign he = 'he'%}
+	{% assign him = 'him'%}
+{% else %}
+    {% assign he = 'she' %}
+	{% assign him = 'her' %}
+{% endif %}
+<h2>About {{ product.metafields.product.name | capitalize }}</h2>
+{{ product.description }}
+<ul>
+
+<li><h3 class="feature-title"><span>Unusual.</span></h3>We make {{ him }} in limited numbers so you won't find {{ him }} in every high street.</li>
+
+<li><h3 class="feature-title"><span>Perfect Finish.</span></h3>{{ he | capitalize }}'s made using a truly unique, hand finished process so there's no seam & no ugly line when you switch {{ him }} on.</li>
+
+{% if product.metafields.product.features contains 'MAINS' %}
+<li><h3 class="feature-title"><span>Mains Powered.</span></h3>{{ he | capitalize }}'s lit by a 110/240V mains bulb - <b>please note</b> this makes {{ product.metafields.product.name | capitalize }} unsuitable as a children's night light.</li>
+{% endif %}
+
+{% if product.metafields.product.features contains 'LED' %}
+<li><h3 class="feature-title"><span>Energy Saving.</span></h3>{{ he | capitalize }}'s lit by a 10V, 3W (yes really!) super low energy LED bulbs that last a lifetime and comes with a mains wall plug transformer.</li>
+{% endif %}
+
+<li><h3 class="feature-title"><span>Tough.</span></h3>{{ product.metafields.product.name | capitalize }} is made from durable thermoplastic that will stay looking good for years.</li>
+
+<li><h3 class="feature-title"><span>Big.</span></h3>{{ product.metafields.product.name | capitalize }} is approximately {{ product.metafields.product.height }} high.</li>
+
+</ul>
+
+<h2>Free Delivery anywhere in the UK!</h2>

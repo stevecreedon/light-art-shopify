@@ -1,59 +1,103 @@
 onion:
     product:
+        id:
+        - 23518252
+        - 23518132
+        - 23518172
+        - 23518202
         name: onion
         gender: male
-        features: NA
+        features: MAINS
         for: dads, cool
-        height: 12
+        height: 12 inches
         animal: dog
         tagline: bold, flamboyant and quirky
+        language: en
+
+onionbr:
+    product:
+        id: 90880593
+        name: onion
+        gender: male
+        features: MAINS
+        for: dads, cool
+        height: 31 cm
+        animal: cão
+        tagline: A luminária bull terrier está fazendo muito sucesso!, M.Eduarda
+        language: pt-br
 
 blake:
-    product:
+    product: 
+        id: 55611762
         name: blake
         gender: male
         features: LED
         for: kids
-        height: 12
+        height: 12 inches
         animal: tiger
         tagline: an adorable cub raising money to protect tigers in the wild
+        language: en
+        in_the_shops: 'true'
 
 archie:
     product:
+        id: 57265082
         name: archie
         gender: male
         features: LED
         for: dads, cool
-        height: 15
+        height: 15 inches
         animal: dog
         tagline: eclectic, light-filled style
+        language: en
+        in_the_shops: 'true'
+        
+archiebr:
+    product:
+        id: 90872987
+        name: archie
+        gender: male
+        features: LED
+        for: dads, cool
+        height: 38 cm 
+        animal: cão
+        tagline: 'Lindo! - Silvia Crusco, DVM'
+        language: pt-br
 
 diego:
     product:
+        id:
+        - 27046032
+        - 27045892
         name: diego
         gender: male
         features: NA
         for: kids, dads, cool
-        height: 12
+        height: 12 inches
         animal: dog
         tagline: surprisingly funky
+        language: en
         
 poppy:
     product:
+        id: 30103472
         name: poppy
         gender: female
         features: NA
         for: kids, cool
-        height: 11
+        height: 11 inches
         animal: rabbit
         tagline: whimsical nostalgia, modern design
+        language: en
         
 pauli:
     product:
+        id: 30103412
         name: pauli
         gender: male
         features: NA
         for: kids
-        height: 8
+        height: 8 inches
         animal: elephant
         tagline: adorable splash of minimalist colour
+        language: en

@@ -1,5 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" itemscope itemtype="http://schema.org/Product">
+
+{% if template == 'page' and page.author == 'Rodrigo Dias Bueno' %}
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br" itemscope itemtype="http://schema.org/Product">
+{% elsif template == 'product' %}
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="{{product.metafields.product.language}}" xml:lang="{{product.metafields.product.language}}" itemscope itemtype="http://schema.org/Product">
+{% else %}
+   <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" itemscope itemtype="http://schema.org/Product">
+{% endif %}
+
  
 <head>
 
@@ -46,16 +54,19 @@
 					<p>
 					    find out more <a href="/pages/about-us">about us</a>
 					</p>
+					<p>
+						your <a href="/pages/privacy-policy">right to privacy</a>
+					</p>
+					<p>
+						our <a href="/pages/terms-and-conditions">terms and conditions</a>
+					</p>	
 				</div>
 			</div>
 			
 			{%if template == 'product'%}
 			<div id="breadcrumb">
-				<a href="/collections/animal-lamps">
-					animal lamps
-				</a><span>></span><a href="/collections/{{product.metafields.product.animal}}-lamps">
-					{{product.metafields.product.animal}}-lamps
-				</a>
+				{% assign bread_crumb = product.metafields.product.language | append: '_breadcrumb' %}
+				{% include  bread_crumb %}
 			</div>
 			{%endif%}
 			<!-- END HELLO -->{% endif %}
@@ -77,6 +88,9 @@
 			<!-- END LINKS -->
 			<!-- START GOCART -->
 			<div id="gocart">
+				<a title="abajures bacanas" href="/pages/abajures-bacanas" style="margin: 0px; border: 0px; padding: 0px;">
+					<img style="position:relative; top: -15px" class="hola-brasil" src="{{ "hola_brasil.png" | asset_url }}" alt="abajures bacanas" />
+				</a>
 				<p><a href="/cart"{% if template == "cart" %} class="active"{% endif %}>{{ cart.item_count }} {{ cart.item_count | pluralize: "Item", "Items" }}</a></p>
 			</div>
 			<!-- END GOCART -->
@@ -130,7 +144,7 @@
 		<!-- START OVERVIEW -->
 		<div id="overview" style="padding-top: 10px;">
 			<ul class="clear">
-				{% for article in blogs.news.articles limit: 3 %}
+				{% for article in blogs.news.articles limit: 9 %}
 				 	<li>
 						<h3><a href="{{ article.url }}">{{ article.title | escape }}</a></h3>
 						<p>{{ article.content | strip_html | strip_newlines | truncate: 150 }}</p>

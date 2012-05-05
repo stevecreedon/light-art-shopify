@@ -3,15 +3,13 @@
 	<span class="st_twitter_large" displayText="Tweet"></span><span class="st_facebook_large" displayText="Facebook"></span><span class="st_ybuzz_large" displayText="Yahoo! Buzz"></span><span class="st_gbuzz_large" displayText="Google Buzz"></span><span class="st_email_large" displayText="Email"></span><span class="st_sharethis_large" displayText="ShareThis"></span>
     <!-- Place this tag where you want the +1 button to render -->
 	<g:plusone></g:plusone>
-	{% if product.metafields.product.name == 'archie' %}
-	<span>
-		<a href="http://www.facebook.com/pages/Archie-the-Whippet/228735777206964">
-			<img src="{{ 'follow.png' | asset_url }}"/>
-		</a>
-	</span>
-	{% endif %}
-	
 
+	<div id="referrals" style="position: relative">
+		{% assign only_small = product.metafields.product.language | append: '_only_small' %}
+		{% include  only_small %}
+	</div>
+	
+   <div style="clear: both;"></div>
 
 </div>
 
@@ -30,7 +28,7 @@
     
 		<!-- START IMAGE -->
 		<div id="image" class="clear">
-			<img src="{{ product.images[0] | product_img_url: "large" }}" alt="{{ product.title | escape }}" />
+			<img src="{{ product.images[0] | product_img_url: "large" }}" alt="{{ image.alt}}" />
                         <div style="clear:both; height: 2px;">&nbsp;</div>
 		</div>
 		<!-- END IMAGE -->
@@ -42,7 +40,7 @@
                               {% for image in product.images %}
 			        
                                  <a href="{{ image | product_img_url: "large" }}" rel="lightbox-images">
-                                   <img src="{{ image | product_img_url: 'small' }}" alt="{{ product.title | escape }}" />
+                                   <img src="{{ image | product_img_url: 'small' }}" alt="{{ image.alt}}" />
                                  </a>
                           
                             {% endfor %}
@@ -61,7 +59,10 @@
 			</a>
 		</div>
 		
-		{% include 'also_like' %}
+		<div id="also-like" style="margin-top: 20px">
+			{% assign also_like = product.metafields.product.language | append: '_also_like' %}
+			{% include  also_like %}
+		</div>
         
 
 		<!-- END THUMBS -->
@@ -73,62 +74,33 @@
 		
 		<!-- buy buttons -->
 		<div id="options" class="rounded10">
-			<form method="post" action="/cart/add" style="border-top: none;">{% if product.variants.size > 1 %}
+			<form method="post" action="/cart/add" style="border-top: none;" id="buy-form">{% if product.variants.size > 1 %}
 				<!-- START VARIANTS -->
 				<!-- END VARIANTS -->{% else %}{% for variant in product.variants %}
 				<input type="hidden" name="id" value="{{ variant.id }}" />{% endfor %}{% endif %}
 				<!-- START BUY -->
-				<div id="buy" >
-				    {% if product.available %}
-						
-						{% if product.variants.size == 1 %} 
-							<p class="in-stock">{{ product.variants.first.inventory_quantity }} IN STOCK NOW</p>
-						 {% else %}
-							<select name="id" id="id" style="font-size: 1.2em;">
-							{% for variant in product.variants %}
-								{% if variant.available %}
-									<option value="{{ variant.id }}">{{ variant.title | escape }} ({{ variant.inventory_quantity }} in stock)</option>
-								{% else %}
-									<option value="{{ variant.id }}" disabled="disabled">{{ variant.title | escape }} ({{ variant.price | money }}) - SOLD OUT</option>
-								{% endif %}
-							{% endfor %}
-							</select>
-						 {% endif %} 
-						
-						<table>
-							<td style="padding-right: 20px; font-weight: bold; font-size: 30px; font-family: 'Open Sans Condensed', sans-serif;">
-								     <span>{{ product.price | money }}</span>
-							         {% if product.compare_at_price_max > product.price %} 
-							           &nbsp;&nbsp;<del>{{ product.compare_at_price_max | money }} plus P&amp;P</del>
-							         {% endif %}
-						     </td>
-						     <td style="vertical-align: middle">
-							 	<input type="image" src="{{ 'add-me-to-your-basket.png?v1' | asset_url }}" alt="BUY THIS" id="add" />
-							 </td>
-						</table>
-						 
-					{% else %}
-						
-						{% if product.tags contains 'coming soon' %}
-							<h6>Coming Soon!</h6>
-						{% else %} 
-							<h6>They've all gone!</h6>
-						{% endif %}
-						<p><a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">click here to find out when it's in stock</a></p>	
-					{% endif %}
+				<div id="buy" style="margin-bottom: 0px; padding-bottom: 0px">
+				    {% assign buy = product.metafields.product.language | append: '_buy' %}
+					{% include  buy %}
 				</div>
 				<!-- END BUY -->
 			</form>
+			
+			<div id="unsure" class="bottom-rounded10">
+				{% assign not_sure = product.metafields.product.language | append: '_not_sure' %}
+				{% include  not_sure %}
+			</div>
 		</div>
 		<!-- END buy buttons -->
 		
 		{% if product.handle != 'replacement-bulb-and-transformer-for-heico-skk-lamps-onion-and-other-lamps' %}
 		<div id="features" class="rounded10">
-			{% include 'features' %}
+			{% assign features = product.metafields.product.language | append: '_features' %}
+			{% include  features %}
 		</div>
 		{% endif %}
-			
-		{% if product.metafields.product.name == 'archie' or product.metafields.product.name == 'blake' %}
+
+		{% if product.metafields.product.in_the_shops == 'true' %}
 		<div id="in-the-shops" class="rounded10">
 			<h2>Can I see {{ product.metafields.product.name | capitalize }} in the shops ?</h2>
 			<p><img src="{{'shop.jpg' | asset_url}}" style="float: right; border: 2px solid #437575;"/>We are selling {{ product.metafields.product.name | capitalize }} through a <a href="/pages/shops-selling-archie-and-blake">select number of shops</a> near us in North East London.</p>
@@ -138,15 +110,8 @@
 		{% endif %}
 		
 		<div id="delivery" class="rounded10">
-			<h2>International Customers:</h2>
-			{{ 'flag_usa.png' | asset_url | img_tag: 'we deliver to the usa' }}&nbsp;
-			{{ 'flag_canada.png' | asset_url | img_tag: 'we deliver to canada' }}&nbsp;
-			{{ 'flag_eu.png' | asset_url | img_tag: 'we deliver to europe' }}&nbsp;
-			{{ 'flag_australia.png' | asset_url | img_tag: 'we deliver to australia' }}&nbsp;
-			{{ 'flag_new_zealand.png' | asset_url | img_tag: 'we deliver to new zealand' }}&nbsp;
-			{{ 'flag_brazil.png' | asset_url | img_tag: 'we deliver to brazil' }}&nbsp;
-			<p>Our lamps will work with all international mains power supplies.{% if product.metafields.product.features contains 'LED' %} For customers in the USA we provide a US standard plug.{% endif %} For customers in other countries we provide an adaptor suitable for your electrical system. Feel free to <a href="http://lightart.wufoo.com/forms/talk-to-us-at-light-art/">contact us</a> if you have any questions.</p> 
-			<p>Unfortunately we have to charge an extra £10 for international delivery. Sorry.</p>
+			{% assign international_customers = product.metafields.product.language | append: '_international_customers' %}
+			{% include international_customers %}
 		</div>	
 	
 	</div>

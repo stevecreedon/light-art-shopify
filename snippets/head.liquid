@@ -8,7 +8,7 @@
   
    {% if template == "collection" %}
       <title>{{ page_title | escape }} | Table Lamps | Unusual Lighting</title>
-      <meta name="description" content="{{ page_title }} - {{ collection.description | strip_html | strip_newlines | truncate: 160 }}" />
+      <meta name="description" content="{{ page_title }} - Unusually cool animal lamp designs by award winning film & televison art director Myra Heller" />
    {% endif %}
 
    {% if template == "product" %}
@@ -49,6 +49,7 @@
 	{{ "jquery-slimbox-2-02.js" | asset_url | script_tag }}	
 	{{ "jquery.easing.1.3.min.js" | asset_url | script_tag }}
 	{{ "trans-banner.min.js" | asset_url | script_tag }}
+	{{ "jquery.simpletip-1.3.1.min.js" | asset_url | script_tag }}
 	{{ "application.js" | asset_url | script_tag }}
 
 	{% if template == 'page' && page.handle == 'shops-selling-archie-and-blake' %}

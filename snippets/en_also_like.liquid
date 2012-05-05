@@ -1,4 +1,4 @@
-<div id="also-like" style="margin-top: 20px">
+
 	<h2 class="tagline">&#8220;You may also like..&#8221;</h2>
 	{% for also in collections.also.products %}
 	   {% if product.id != also.id %}
@@ -8,4 +8,3 @@
 	   {% endif %}
 	{% endfor %}
 	<div style="clear:both;"></div>
-</div>

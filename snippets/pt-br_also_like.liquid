@@ -1,0 +1,9 @@
+<h2 class="tagline">&#8220;Tenho certeza que você vai gostar..&#8221;</h2>
+{% for also in collections.also.products %}
+   {% if product.id != also.id %}
+   <div class="also-like-image-container">
+   	<a href="{{ also.url }}" title="{{also.metafields.product.name}}"><img alt="{{also.metafields.product.name}}" src="{{ also.featured_image | product_img_url: 'small' }}" /></a>
+   </div>
+   {% endif %}
+{% endfor %}
+<div style="clear:both;"></div>

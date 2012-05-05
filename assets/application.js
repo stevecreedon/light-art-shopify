@@ -104,7 +104,7 @@
 					});
 			}
 		
-			
+		    //$('.TB_Wrapper').complete()
 			
 			$('.boxgrid.slidedown').hover(function(){  
 		        $(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});  
@@ -153,6 +153,12 @@
 			}, function() {  
 			        var src = $(".blake-on-off").attr("src");
 			        $(".blake-on-off").attr("src",src.replace("-on.jpg","-off.jpg"));
+			});
+			
+			$("img.hola-brasil").simpletip({   
+			   fixed: true,
+			   content: 'Hola nos Brasil',
+			   position: bottom
 			});
          
 	});

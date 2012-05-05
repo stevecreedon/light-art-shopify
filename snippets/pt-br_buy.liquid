@@ -1,0 +1,41 @@
+{% if product.available %}
+	
+	{% if product.variants.size == 1 %} 
+		<p class="in-stock">{{ product.variants.first.inventory_quantity }} EM ESTOQUE AGORA</p>
+	 {% else %}
+		<select name="id" id="id" style="font-size: 1.2em;">
+		{% for variant in product.variants %}
+			{% if variant.available %}
+				<option value="{{ variant.id }}">{{ variant.title | escape }} ({{ variant.inventory_quantity }} em estoque)</option>
+			{% else %}
+				<option value="{{ variant.id }}" disabled="disabled">{{ variant.title | escape }} ({{ variant.price | money }}) - SOLD OUT</option>
+			{% endif %}
+		{% endfor %}
+		</select>
+	 {% endif %} 
+
+	<table>
+		<td style="padding-right: 20px; font-weight: bold; font-size: 30px; font-family: 'Open Sans Condensed', sans-serif;">
+			     <span>{{ product.price | money }}</span>
+		         {% if product.compare_at_price_max > product.price %} 
+		           &nbsp;&nbsp;<del>{{ product.compare_at_price_max | money }} plus P&amp;P</del>
+		         {% endif %}
+	     </td>
+	    <td style="vertical-align: middle">
+		    <a class="submit-button">Adicione {{ product.metafields.product.name | capitalize }} no seu carrinho</a>
+		 </td>
+	</table>
+
+	<script type="text/javascript">
+	 $(".submit-button").click(function() { $("#buy-form").submit(); });
+	</script>
+	 
+{% else %}
+	
+	{% if product.tags contains 'coming soon' %}
+		<h6>Coming Soon!</h6>
+	{% else %} 
+		<h6>Que pena, eles acabaram!</h6>
+	{% endif %}
+	<p><a href="http://lightart.wufoo.com/forms/let-me-know-when-you-have-some/">Clique aqui para saber quando teremos em estoque.</a></p>	
+{% endif %}

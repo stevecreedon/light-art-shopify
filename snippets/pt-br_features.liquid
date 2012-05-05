@@ -1,0 +1,43 @@
+{% if product.metafields.product.gender == 'male' %}
+	{% assign he = 'he'%}
+	{% assign him = 'him'%}
+{% else %}
+    {% assign he = 'she' %}
+	{% assign him = 'her' %}
+{% endif %}
+
+<h2>Sobre o {{ product.metafields.product.name | capitalize }}</h2>
+{{ product.description }}
+<ul>
+
+<li><h3 class="feature-title"><span>Incomum.</span></h3>Nós fazemos ele em quantidade limitada, portanto você não irá encontrá-lo nas lojas.</li>
+
+<li><h3 class="feature-title"><span>Acabamento perfeito.</span></h3>Ele e feito usando um processo único, acabado a mão,  assim não há juntas horríves de plástico  quando você ligá-lo.</li>
+
+{% if product.metafields.product.features contains 'MAINS' %}
+<li><h3 class="feature-title"><span>Corrente.</span></h3>Funciona em 110/220V.</li>
+{% endif %}
+
+{% if product.metafields.product.features contains 'LED' %}
+<li><h3 class="feature-title"><span>Economia de Energia.</span></h3>Ele está iluminado por uma 10V, 3W (sim é verdade!) uma lâmpadas de super baixa energia  de LED que dura uma vida inteira e vem com um conector para qualquer tomada.</li>
+{% endif %}
+
+<li><h3 class="feature-title"><span>Durável.</span></h3>{{ product.metafields.product.name | capitalize }} é feito de termoplástico durável que vai ficar com sua boa aparência por anos.</li>
+
+<li><h3 class="feature-title"><span>Grande.</span></h3>{{ product.metafields.product.name | capitalize }} mede aproximadamente {{ product.metafields.product.height }} de altura</li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
